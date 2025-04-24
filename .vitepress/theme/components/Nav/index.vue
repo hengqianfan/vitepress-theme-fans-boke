@@ -36,11 +36,11 @@ const changeNavItem = (mo, no) => {
 
     if (xdata.base == '/') {
         // 默认base时
-        router.go(mo)
+        router.go(no)
 
     }
-    // 加上base
-    router.go(`${xdata.base}${mo}`)
+    // 加上base,并除去多余的/
+    router.go(`${xdata.base}${no.slice(1)}`)
 }
 
 const toPage = (mo) => {
