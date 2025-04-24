@@ -33,13 +33,26 @@ const changeNavItem = (mo, no) => {
     // 改变索引值
     boke.changeActiveIndex(mo)
     // 进入对应的页面
-    router.go(no)
+
+    if (xdata.base == '/') {
+        // 默认base时
+        router.go(mo)
+
+    }
+    // 加上base
+    router.go(`${xdata.base}${mo}`)
 }
 
 const toPage = (mo) => {
     // 清除标签栏
     boke.closeTags()
-    router.go(mo)
+    if (xdata.base == '/') {
+        // 默认base时
+        router.go(mo)
+
+    }
+    // 加上base
+    router.go(`${xdata.base}${mo}`)
 }
 
 </script>

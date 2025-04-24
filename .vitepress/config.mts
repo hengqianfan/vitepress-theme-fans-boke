@@ -1,11 +1,12 @@
 import { defineConfig } from 'vitepress'
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import xdata from '../data/main.json'
 import mermaidPlugin from './tools/myMermaid'
-// https://vitepress.dev/reference/site-config
+
 export default defineConfig({
   title: "ZONOTES",
   description: "衡千帆的世界",
-  base: '/vitepress-theme-fans-boke/',
+  base: xdata.base,
   outDir: './.vitepress/dist',
   themeConfig: {
 
