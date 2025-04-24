@@ -6,7 +6,7 @@ export default defineConfig({
   title: "ZONOTES",
   description: "衡千帆的世界",
   base: 'vitepress-theme-fans-boke',
-
+  outDir: './.vitepress/dist',
   themeConfig: {
 
     // https://vitepress.dev/reference/default-theme-config
