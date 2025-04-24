@@ -1,0 +1,99 @@
+{
+    "SiteName": "ZONOTES",
+    "PersonName": "衡千帆",
+    "PersonIntro": "拒绝内耗，先完成，再完美",
+    "PersonSocialLinks": [
+        {
+            "name": "bilibili",
+            "link": "https://bilibili.com/"
+        },
+        {
+            "name": "github",
+            "link": "https://github.com/hengqianfan"
+        },
+        {
+            "name": "heihe",
+            "link": "https://github.com/hengqianfan"
+        }
+    ],
+    "SearchKeyword": "站外搜索",
+    "SearchEngineList": [
+        {
+            "name": "bing",
+            "icon": "bing",
+            "baseurl": "https://bing.com/search?q="
+        },
+        {
+            "name": "google",
+            "icon": "google",
+            "baseurl": "https://www.google.com/search?q="
+        },
+        {
+            "name": "baidu",
+            "icon": "baidu",
+            "baseurl": "https://baidu.com/s?wd="
+        },
+        {
+            "name": "github",
+            "icon": "github",
+            "baseurl": "https://github.com/search?q="
+        },
+        {
+            "name": "csdn",
+            "icon": "csdn",
+            "baseurl": "https://so.csdn.net/so/search?q="
+        },
+        {
+            "name": "npm",
+            "icon": "npm",
+            "baseurl": "https://www.npmjs.com/search?q="
+        },
+        {
+            "name": "zhihu",
+            "icon": "zhihu2",
+            "baseurl": "https://www.zhihu.com/search?type=content&q="
+        },
+        {
+            "name": "bilibili",
+            "icon": "bilibili",
+            "baseurl": "https://search.bilibili.com/all?keyword="
+        },
+        {
+            "name": "youtube",
+            "icon": "youtube3",
+            "baseurl": "https://www.youtube.com/results?search_query="
+        },
+        {
+            "name": "haici",
+            "icon": "haici",
+            "baseurl": "https://corp.dict.cn/search?q="
+        },
+        {
+            "name": "iciba",
+            "icon": "iciba",
+            "baseurl": "https://www.iciba.com/word?w="
+        }
+    ],
+    "NavList": [
+        {
+            "name": "主页",
+            "link": "/"
+        },
+        {
+            "name": "网址",
+            "link": "/pages/sites"
+        },
+        {
+            "name": "笔记",
+            "link": "/pages/notes"
+        },
+        {
+            "name": "生活",
+            "link": "/pages/life"
+        },
+        {
+            "name": "关于",
+            "link": "/pages/about"
+        }
+    ]
+}

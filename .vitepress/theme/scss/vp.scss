@@ -1,0 +1,259 @@
+:root {
+
+    h1 {
+        margin: 20px;
+        line-height: 28px;
+        font-size: 36px;
+        font-weight: 400;
+        font-family: '优设标题黑';
+
+        color: black;
+        text-align: center;
+        min-width: 100px;
+        padding: 10px;
+
+
+    }
+
+    h2 {
+        margin: 15px;
+        margin-top: 30px;
+        line-height: 28px;
+        font-size: 28px;
+        font-weight: 400;
+        color: black;
+
+        font-family: '优设标题黑';
+
+        min-width: 100px;
+
+
+
+
+
+    }
+
+    h3 {
+        margin: 15px;
+        margin-top: 30px;
+        line-height: 24px;
+        font-size: 20px;
+        font-weight: 400;
+        color: black;
+        // background-color: white;
+        font-family: '优设标题黑';
+        display: block;
+        min-width: 100px;
+
+        // text-decoration: 1px dashed blue;
+    }
+
+    h4 {
+        font-size: 18px;
+        margin: 10px;
+        line-height: 24px;
+        font-size: 16px;
+        font-weight: 400;
+
+        font-family: '优设标题黑';
+    }
+
+    h5,
+    h6 {
+        margin: 10px;
+        line-height: 24px;
+        font-size: 16px;
+        font-weight: 400;
+
+        font-family: '优设标题黑';
+    }
+
+
+    p {
+        margin-top: 5px;
+        font-weight: 500;
+    }
+}
+
+:root {
+    // --vp-custom-block-font-size: 14px;
+    // --vp-custom-block-code-font-size: 13px;
+
+
+    .custom-block.info {
+        //  这里只能改颜色
+        --vp-custom-block-info-border: transparent;
+        //  所以自己重写一个覆盖
+        border: 2px dashed gray;
+        --vp-custom-block-info-text: var(--vp-c-text-1);
+        --vp-custom-block-info-bg: #f1efef;
+        --vp-custom-block-info-code-bg: var(--vp-c-default-soft);
+    }
+
+    & {
+        --vp-custom-block-note-border: transparent;
+        --vp-custom-block-note-text: var(--vp-c-text-1);
+        --vp-custom-block-note-bg: var(--vp-c-default-soft);
+        --vp-custom-block-note-code-bg: var(--vp-c-default-soft);
+    }
+
+    // .custom-block.info a,
+    // .custom-block.info code {}
+
+    .custom-block.tip {
+        //  这里只能改颜色
+        --vp-custom-block-tip-border: transparent;
+        //  所以自己重写一个覆盖
+        // border: 2px dashed #4a426a;
+        border: 2px dashed #2d1a76;
+
+        --vp-custom-block-tip-text: var(--vp-c-text-1);
+        --vp-custom-block-tip-bg: #d9d1f3;
+        color: #191f18;
+        --vp-custom-block-tip-code-bg: var(--vp-c-tip-soft);
+    }
+
+
+
+    .custom-block.warning {
+        margin: 20px 0;
+        //  这里只能改颜色
+        --vp-custom-block-warning-border: transparent;
+        //  所以自己重写一个覆盖
+        // border: 2px dashed #7e7e40;
+
+        border: 2px dashed #cf962b;
+        --vp-custom-block-warning-text: var(--vp-c-text-1);
+        // --vp-custom-block-warning-bg: #f7f3dd;
+        --vp-custom-block-warning-bg: #FFFFCC;
+        // --vp-custom-block-warning-bg: #e7ec81;
+
+        // --vp-custom-block-warning-code-bg: var(--vp-c-warning-soft);
+        // --vp-custom-block-warning-code-bg: #1e5aa8;
+
+
+    }
+
+    // .custom-block.warning a,
+    // .custom-block.warning code {
+
+    // }
+
+
+
+
+
+
+
+    .custom-block.danger {
+        //  这里只能改颜色
+        --vp-custom-block-danger-border: red;
+        //  所以自己重写一个覆盖
+        border: 2px dashed red;
+        --vp-custom-block-danger-text: var(--vp-c-text-1);
+        --vp-custom-block-danger-bg: #fbe2e5;
+        // --custom-color: #f7eff0;
+
+        // background: linear-gradient(45deg, var(--custom-color) 25%, white 0, white 50%, var(--custom-color) 0, var(--custom-color) 75%, white 0, white 100%);
+        // background-size: 30px 30px;
+
+        --vp-custom-block-danger-code-bg: var(--vp-c-danger-soft);
+
+        transition: 1s ease;
+    }
+
+    .custom-block.danger:hover {
+        //  这里只能改颜色
+        --vp-custom-block-danger-border: red;
+        //  所以自己重写一个覆盖
+        // --vp-custom-block-danger-text: white;
+        --vp-custom-block-danger-bg: white;
+
+        // background: linear-gradient(45deg, #d6542d, #d4cc7e, #6d134a, #8b2469, #ddd39b, #8b0909);
+        // -webkit-background-clip: text;
+        // background-clip: text;
+        // color: transparent;
+        // transition: background 0.5s;
+        background: white;
+
+        transition: 1s ease;
+    }
+
+    // .custom-block.danger:hover code {
+
+
+    // }
+
+    .custom-block.danger:hover a {
+        color: #e76d26;
+    }
+
+
+    .custom-block.details {
+        --vp-custom-block-details-border: var(--vp-custom-block-info-border);
+        border: 2px dashed transparent;
+
+        --vp-custom-block-details-text: var(--vp-custom-block-info-text);
+        --vp-custom-block-details-bg: var(--vp-custom-block-info-bg);
+        --vp-custom-block-details-code-bg: var(--vp-custom-block-info-code-bg);
+        transition: 1s ease;
+    }
+
+
+    .custom-block.details:hover {
+        --vp-custom-block-details-border: var(--vp-custom-block-info-border);
+        border: 2px dashed rgb(19, 16, 16);
+        --vp-custom-block-details-text: var(--vp-custom-block-info-text);
+        --vp-custom-block-details-bg: var(--vp-custom-block-info-bg);
+        --vp-custom-block-details-code-bg: var(--vp-custom-block-info-code-bg);
+    }
+
+
+}
+
+:root {
+    code {
+        background-color: #456ca0;
+        color: white;
+        padding: 3px;
+        border-radius: 6px;
+        font-family: '优设标题黑';
+        font-size: 14px;
+    }
+
+    div[class*='language-'] {
+        // background-color: wheat;
+
+        margin: 20px 0;
+        border-radius: 12px;
+        // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+        code {
+            font-family: 'Inter';
+
+            background-color: transparent;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+// .vp-code span {
+//     color: var(--shiki-dark, inherit);
+//     background-color: #cf962b;
+// }
+
+// .dark .vp-code span {
+//     color: var(--shiki-dark, inherit);
+// }
+
+// html:not(.dark) .vp-code span {
+//     color: var(--shiki-light, inherit);
+//     // background-color: #2d1a76;
+// }

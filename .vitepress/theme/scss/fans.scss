@@ -1,0 +1,15 @@
+.hr-gray {
+    border: 0;
+    padding-top: 1px;
+    background: repeating-linear-gradient(to right, #a2a9b6 0px, #a2a9b6 4px, transparent 0px, transparent 10px);
+
+}
+
+.hr-mo1 {
+    border: 0;
+    border-top: 2px dashed #a2a9b6;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

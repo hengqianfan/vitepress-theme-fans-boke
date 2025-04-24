@@ -1,3 +1,20 @@
+node_modules
+
+.vitepress/dist
+.vitepress/cache
+.vitepress/.temp
+
+docs/history
+docs/xrepo
+
+
+# 私人的文件库 【本地】
+docs/me-repo
+docs/me-pages
+docs/me-articles
+docs/zo-repo/myDiary
+
+
 # Logs
 logs
 *.log
@@ -103,12 +120,6 @@ dist
 # vuepress v2.x temp and cache directory
 .temp
 .cache
-
-# vitepress build output
-**/.vitepress/dist
-
-# vitepress cache directory
-**/.vitepress/cache
 
 # Docusaurus cache and generated files
 .docusaurus
