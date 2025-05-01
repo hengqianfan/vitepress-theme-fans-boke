@@ -57,7 +57,7 @@
     },
     {
         "name": "初始化电脑",
-        "link": "/notes/computer-init/00 简述",
+        "link": "/notes/ReinstallTheOS/00 简述",
         "kind": "电脑",
         "icon": "/icon/computer.png",
         "cover": "/cover/computercover.png"

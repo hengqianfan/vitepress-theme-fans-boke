@@ -51,6 +51,8 @@ import Clock from '../Clock/index.vue'
 </script>
 
 <style lang="scss" scoped>
+@use './app.scss';
+
 .xSide {
     min-height: 80vh;
     display: flex;
@@ -62,8 +64,6 @@ import Clock from '../Clock/index.vue'
     .ma-container {
         overflow: scroll;
     }
-
-    // overflow-x: scroll;
 
 
 }

@@ -7,7 +7,7 @@
             </div>
 
 
-            <a class="articlesCard-title" :href="withBase(item.url)" @click="boke.closeTags()">
+            <a class="articlesCard-title" :href="withBase(item.url)" @click="boke.closeTags(), boke.openOutline()">
                 {{ getPostName(item.url) }}
             </a>
 
@@ -39,11 +39,10 @@ onMounted(() => {
 
     boke.closeDocAfter()
     boke.closeDirectory()
+    boke.closeOutline()
     boke.openPerson()
     boke.openTags()
     boke.openClock()
-
-
 
 })
 const boke = useBokeStore()
@@ -95,15 +94,6 @@ const clearNavItemIndex = () => {
             }
 
         }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -171,6 +161,11 @@ const clearNavItemIndex = () => {
                     background-color: #e0e4e6;
                     font-size: 10px;
                     border-radius: 5px;
+                }
+
+                .articlesCard-tag:hover {
+                    background-color: #2d5296;
+                    color: white;
                 }
             }
         }

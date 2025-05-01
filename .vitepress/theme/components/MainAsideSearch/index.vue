@@ -76,12 +76,13 @@ const toSearch = () => {
 
 <style lang="scss" scoped>
 .mas-all {
+    margin: 10px;
     margin-top: 30px;
     width: 260px;
     padding: 20px;
     background-color: white;
-    box-shadow: 5px 5px 18px #dedede,
-        -5px -5px 18px #ffffff;
+    box-shadow: 2px 2px 8px #dedede,
+        -2px -2px 8px #ffffff;
     border-radius: 10px;
     display: flex;
     justify-content: space-around;

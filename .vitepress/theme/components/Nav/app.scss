@@ -1,0 +1,73 @@
+@media (max-width: 768px) {
+    .xNav-all {
+        height: 40px !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0px !important;
+
+        display: flex;
+        align-items: center !important;
+        justify-content: center !important;
+
+
+
+        position: fixed;
+
+
+
+        z-index: 1000;
+
+        box-shadow: none !important;
+
+
+        .xNav-left {
+
+            display: none !important;
+            margin-left: 0 !important;
+
+
+        }
+
+        .xNav-right {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            margin: 0 !important;
+
+            .xNav-menu {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around !important;
+
+                .xNav-menu-item {
+                    margin: 0 5px !important;
+                    height: 35px;
+                    width: 40px !important;
+                    line-height: 35px;
+                    text-align: center;
+                    background-color: transparent;
+
+                    font-weight: 600;
+                    font-family: '剑豪体';
+                    font-size: 12px !important;
+
+
+                }
+
+                .xNav-menu-item:hover {
+
+                    color: #6868b4;
+                }
+
+                .active {
+                    border-bottom: 2px solid #6868b4 !important;
+                    color: #6868b4;
+
+                }
+            }
+        }
+
+    }
+}

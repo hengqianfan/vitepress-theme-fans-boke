@@ -3,7 +3,7 @@ aside: left
 tags: ['wordpress','web']
 icon: 'wordpress'
 open: false
-
+cover: '/cover/wordpress.png'
 ---
  
 ###### 24103001

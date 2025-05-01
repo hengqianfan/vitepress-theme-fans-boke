@@ -3,6 +3,7 @@ aside: left
 tags: ['vitepress','博客','vue']
 icon: 'vitepress'
 id: 24110501
+cover: '/cover/vitepress.png'
 ---
  
 ######  {{ $frontmatter.id? $frontmatter.id : $frontmatter.zoid }}

@@ -44,6 +44,10 @@ const boke = useBokeStore()
 
 onMounted(() => {
     boke.closeDirectory()
+    boke.closeTags()
+    boke.closeOutline()
+    boke.openPerson()
+
 
 })
 

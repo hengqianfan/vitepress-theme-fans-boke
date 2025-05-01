@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+    .xMain-all {
+
+        margin: 0 !important;
+        padding: 0px !important;
+        width: 100% !important;
+
+
+        position: relative !important;
+        display: flex;
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+
+
+        .xMain-content {
+
+            margin: 0 !important;
+
+            width: 80%;
+            min-height: 60vh;
+
+
+        }
+    }
+}

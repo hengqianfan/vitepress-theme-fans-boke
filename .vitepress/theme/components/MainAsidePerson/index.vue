@@ -19,15 +19,19 @@ const getSocialLinkIcon = (momo) => {
 </script>
 
 <style lang="scss" scoped>
+@use './app.scss';
+
 .xPerson {
-    background-color: white;
-    // border: 1px dotted blue;
+    margin: 10px;
+
     width: 260px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
     border-radius: 10px;
+
+    background-color: white;
 
 
     box-shadow: 1px 1px 3px #dedede,

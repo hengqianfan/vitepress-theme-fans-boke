@@ -56,6 +56,8 @@ const changeNavItem = (mo, no) => {
 </script>
 
 <style lang="scss" scoped>
+@use './app.scss';
+
 .xNav-all {
     height: 70px;
     width: 90%;
@@ -77,6 +79,11 @@ const changeNavItem = (mo, no) => {
     position: fixed;
 
     z-index: 1000;
+
+    // 毛玻璃特效
+    // background-color: rgba(255, 255, 255, 0.5);
+    // -webkit-backdrop-filter: blur(20px);
+    // backdrop-filter: blur(20px);
 
 
 
@@ -125,10 +132,12 @@ const changeNavItem = (mo, no) => {
                 width: 70px;
                 line-height: 35px;
                 text-align: center;
-                background-color: white;
+                background-color: transparent;
                 // border-radius: 10px;
                 font-weight: 600;
                 font-family: '剑豪体';
+
+
             }
 
             .xNav-menu-item:hover {

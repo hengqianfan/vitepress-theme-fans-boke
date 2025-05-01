@@ -34,8 +34,6 @@ import xMain from './components/Main/index.vue'
 <style lang="scss">
 .layout-all {
 
-    width: 100%;
-    min-height: 100vh;
     $lineColor: #f5f0f0;
     background-image: linear-gradient($lineColor 1px, transparent 1px),
 
@@ -45,8 +43,13 @@ import xMain from './components/Main/index.vue'
         10px 100%;
     background-position: 0 0;
 
-    position: relative;
 
+    width: 100%;
+    min-height: 100vh;
+
+
+
+    position: relative;
 
 
 

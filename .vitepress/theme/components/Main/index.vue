@@ -42,6 +42,8 @@ const { page, frontmatter } = useData()
 </script>
 
 <style lang="scss" scoped>
+@use './app.scss';
+
 .xMain-all {
     display: flex;
     flex-direction: row;
@@ -49,26 +51,17 @@ const { page, frontmatter } = useData()
     padding-top: 80px;
     width: 90%;
 
-
-
-
-
     position: relative;
-
-
 
 
     .xMain-content {
 
         margin: 10px 0 0 300px;
-        // border: 1px dotted red;
+
         width: 80%;
         min-height: 60vh;
 
-        // background-color: white;
 
-        // box-shadow: 5px 5px 18px #dedede,
-        //     -5px -5px 18px #ffffff;
     }
 }
 </style>

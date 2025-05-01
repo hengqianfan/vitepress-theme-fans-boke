@@ -58,7 +58,7 @@ onMounted(() => {
     boke.closeTags
     boke.closeDocAfter()
     boke.closeDirectory()
-
+    boke.closeOutline()
     boke.openPerson()
 
 })

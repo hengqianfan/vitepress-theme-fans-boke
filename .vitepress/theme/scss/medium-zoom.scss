@@ -4,4 +4,9 @@
 
 .medium-zoom-image {
     z-index: 21;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 5px 5px 18px #dedede,
+        -5px -5px 18px #ffffff;
+    border-radius: 10px;
 }

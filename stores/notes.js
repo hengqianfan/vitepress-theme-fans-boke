@@ -29,6 +29,8 @@ const isDirectory = (mo = []) => {
     let now = ref('')
 
     for (let i = 0; i < DirectoryGroup.length; i++) {
+
+
         let res = mo.includes(DirectoryGroup[i].slice(1))
 
         if (res) {

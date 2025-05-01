@@ -7,9 +7,9 @@ export const useBokeStore = defineStore('boke', {
     state: () => (
         {
             nowActiveNavItem: 0,
-            isShowTags: true,
+            isShowTags: false,
             isShowDocAfter: true,
-            isShowOutline: true,
+            isShowOutline: false,
             isShowPerson: true,
             isShowDirectory: false,
             isShowClock: false
@@ -50,6 +50,15 @@ export const useBokeStore = defineStore('boke', {
             this.isShowDirectory = false
 
         },
+        openOutline() {
+            this.isShowOutline = true
+        },
+
+        closeOutline() {
+            this.isShowOutline = false
+
+        },
+
         closeClock() {
             this.isShowClock = false
         },
