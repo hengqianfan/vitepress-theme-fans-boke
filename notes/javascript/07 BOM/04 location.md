@@ -1,0 +1,5 @@
+```js
+
+window.location
+
+```

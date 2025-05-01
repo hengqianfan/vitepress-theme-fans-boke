@@ -1,9 +1,9 @@
 <template>
     <div class="xNav-all">
         <div class="xNav-left">
-            <img src="/icon/logo.png" alt="" class="xNav-logo" @click="toPage(`/`)">
+            <img src="/icon/logo.png" alt="" class="xNav-logo" @click="changeNavItem(0, `/`)">
 
-            <div class=xNav-siteName @click="toPage(`/`)">{{ xdata.SiteName }}</div>
+            <div class=xNav-siteName @click="changeNavItem(0, `/`)">{{ xdata.SiteName }}</div>
 
         </div>
         <div class="xNav-right">
@@ -26,14 +26,23 @@ const boke = useBokeStore()
 
 const router = useRouter()
 
-
+// mo 索引 no 路径
 const changeNavItem = (mo, no) => {
-    // 清除标签栏
-    boke.closeTags()
+
     // 改变索引值
     boke.changeActiveIndex(mo)
-    // 进入对应的页面
 
+    // 切换页面时，标签栏的出现逻辑
+    if (mo == 0) {
+        // 当在切换到首页时,开启标签
+        boke.openTags()
+    } else {
+        // 当在其他页面时，关闭文章标签
+        boke.closeTags()
+
+    }
+
+    // 随后，进入对应的页面
     if (xdata.base == '/') {
         // 默认base时
         router.go(no)
@@ -43,17 +52,6 @@ const changeNavItem = (mo, no) => {
     router.go(`${xdata.base}${no.slice(1)}`)
 }
 
-const toPage = (mo) => {
-    // 清除标签栏
-    boke.closeTags()
-    if (xdata.base == '/') {
-        // 默认base时
-        router.go(mo)
-
-    }
-    // 加上base
-    router.go(`${xdata.base}${mo}`)
-}
 
 </script>
 

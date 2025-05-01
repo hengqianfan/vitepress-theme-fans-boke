@@ -1,0 +1,114 @@
+[
+    {
+        "name": "HTML",
+        "link": "/notes/html/00 简述",
+        "kind": "编程",
+        "icon": "/icon/html.png",
+        "cover": "/cover/htmlcover.png"
+    },
+    {
+        "name": "SCSS",
+        "link": "/notes/scss/00 简述",
+        "kind": "编程",
+        "icon": "/icon/sass.png",
+        "cover": "/cover/scsscover.png"
+    },
+    {
+        "name": "JavaScript",
+        "link": "/notes/javascript/00 简述",
+        "kind": "编程",
+        "icon": "/icon/javascript.png",
+        "cover": "/cover/jscover.png"
+    },
+    {
+        "name": "VUE",
+        "link": "/notes/vue/00 简述",
+        "kind": "编程",
+        "icon": "/icon/vue.png",
+        "cover": "/cover/vuecover.png"
+    },
+    {
+        "name": "Nodejs",
+        "link": "/notes/nodejs/00 简述",
+        "kind": "编程",
+        "icon": "/icon/nodejs.png",
+        "cover": "/cover/nodejscover.png"
+    },
+    {
+        "name": "Electron",
+        "link": "/notes/electron/00 简述",
+        "kind": "编程",
+        "icon": "/icon/electron.png",
+        "cover": "/cover/electroncover.png"
+    },
+    {
+        "name": "Github",
+        "link": "/notes/github/00 简述",
+        "kind": "编程",
+        "icon": "/icon/github.png",
+        "cover": "/cover/githubcover.png"
+    },
+    {
+        "name": "Vitepress",
+        "link": "/notes/vitepress/00 简述",
+        "kind": "网站",
+        "icon": "/icon/vitepress.png",
+        "cover": "/cover/vitepresscover.png"
+    },
+    {
+        "name": "初始化电脑",
+        "link": "/notes/computer-init/00 简述",
+        "kind": "电脑",
+        "icon": "/icon/computer.png",
+        "cover": "/cover/computercover.png"
+    },
+    {
+        "name": "建站相关笔记",
+        "link": "/notes/build-site/00 简述",
+        "kind": "网站",
+        "icon": "/icon/web.png",
+        "cover": "/cover/sitecover.png"
+    },
+    {
+        "name": "Uniapp",
+        "link": "/notes/uniapp/00 简述",
+        "kind": "编程",
+        "icon": "/icon/uniapp.png",
+        "cover": "/cover/uniappcover.png"
+    },
+    {
+        "name": "Docker",
+        "link": "/notes/docker/00 简述",
+        "kind": "编程",
+        "icon": "/icon/docker.png",
+        "cover": "/cover/dockercover.png"
+    },
+    {
+        "name": "cocosCreator",
+        "link": "/notes/cocos-creator/00 简述",
+        "kind": "编程",
+        "icon": "/icon/cocos.png",
+        "cover": "/cover/cocoscover.png"
+    },
+    {
+        "name": "Nginx",
+        "link": "/notes/nginx/00 简述",
+        "kind": "编程",
+        "icon": "/icon/nginx.png",
+        "cover": "/cover/nginxcover.png"
+    },
+    {
+        "name": "Python",
+        "link": "/notes/python/00 简述",
+        "kind": "编程",
+        "icon": "/icon/python.png",
+        "cover": "/cover/pythoncover.png"
+    },
+    {
+        "name": "VScode",
+        "link": "/notes/vscode/00 简述",
+        "kind": "编程",
+        "icon": "/icon/vscode.png",
+        "cover": "/cover/vscodecover.png"
+    }
+]

@@ -129,7 +129,7 @@ const toSearch = () => {
         height: 40px;
         width: 400px;
         background-color: white;
-        z-index: 100000;
+        z-index: 100;
 
         box-shadow: 1px 1px 3px #dedede,
             -1px -1px 3px #f5f0f0;

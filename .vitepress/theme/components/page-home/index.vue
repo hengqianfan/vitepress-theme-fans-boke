@@ -14,7 +14,8 @@
             <div class="articlesCard-info">
                 <div class="articlesCard-time">{{ formatDate(item.frontmatter.id) }}</div>
                 <div class="articlesCard-tags">
-                    <div class="articlesCard-tag" v-for="tag in item.frontmatter.tags.slice(0, 3)">{{ tag }}</div>
+                    <div class="articlesCard-tag" v-for="tag in item.frontmatter.tags.slice(0, 3)"
+                        @click="posts.changeNowTag(tag)">{{ tag }}</div>
                 </div>
             </div>
             <!-- <div>{{ item }}</div> -->
@@ -24,17 +25,26 @@
 </template>
 
 <script setup>
-import { withBase } from 'vitepress';
+import { withBase, useData } from 'vitepress';
 import { onMounted } from 'vue';
 import { getPostName } from '../../../tools/getPostName'
 import { formatDate } from '../../../tools/formatDate'
 import { useBokeStore } from '../../../../stores/boke'
 import { usePostsStore } from '../../../../stores/posts'
 const posts = usePostsStore()
+const { page } = useData()
 
 onMounted(() => {
-    boke.openTags()
+
+
     boke.closeDocAfter()
+    boke.closeDirectory()
+    boke.openPerson()
+    boke.openTags()
+    boke.openClock()
+
+
+
 })
 const boke = useBokeStore()
 
@@ -49,6 +59,7 @@ const getImgSrc = (mo) => {
 // 防止从主页进入文章页后，导航栏的主页按钮依旧保持选中的状态
 const clearNavItemIndex = () => {
     boke.nowActiveNavItem = 100
+    boke.closePerson()
 }
 </script>
 

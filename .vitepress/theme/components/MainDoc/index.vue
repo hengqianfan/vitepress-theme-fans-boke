@@ -38,9 +38,42 @@
 
 <script setup>
 import MainDocAfter from '../MainDocAfter/index.vue'
-import { Content, withBase } from 'vitepress';
-import { useData } from 'vitepress'
+import { Content, withBase, useData } from 'vitepress';
+import { onMounted, onUpdated, watch, ref } from 'vue';
+import { useBokeStore } from '../../../../stores/boke';
+import { useNotesStore } from '../../../../stores/notes';
+
+
+
+const boke = useBokeStore()
+
+
+const notes = useNotesStore()
+
 const { page } = useData()
+
+
+onMounted(() => {
+    boke.closePerson()
+
+})
+// const filePath = ref(page.value.relativePath)
+
+watch(page, () => {
+
+    console.log("页面开始变化");
+    console.log(page.value.relativePath);
+
+    notes.updateDirectory(page.value.relativePath)
+})
+
+
+
+
+
+
+
+
 
 const toHeader = (mo) => {
     // 统一小写

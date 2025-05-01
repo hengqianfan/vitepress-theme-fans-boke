@@ -3,10 +3,11 @@ import { useData } from 'vitepress'
 import xNav from './components/Nav/index.vue'
 import xMain from './components/Main/index.vue'
 
+
+
 // import NotFound from './NotFound.vue'
 // import Home from './Home.vue'
-// import Page from './Page.vue'
-const { page, frontmatter } = useData()
+
 </script>
 
 <template>
@@ -14,6 +15,7 @@ const { page, frontmatter } = useData()
         <xNav />
 
         <xMain />
+
     </div>
 
 
@@ -44,5 +46,9 @@ const { page, frontmatter } = useData()
     background-position: 0 0;
 
     position: relative;
+
+
+
+
 }
 </style>

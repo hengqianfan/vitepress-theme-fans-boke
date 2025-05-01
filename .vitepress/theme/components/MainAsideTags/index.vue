@@ -47,7 +47,7 @@ const boke = useBokeStore()
         font-size: 13px;
         font-family: '优设标题黑';
         border-radius: 8px;
-        // opacity: 0.6;
+
 
         color: #3071c7;
 
@@ -66,5 +66,18 @@ const boke = useBokeStore()
 
         // color: rgb(72, 138, 109);
     }
+
+    .mat-tag:hover {
+        background-color: #3071c7;
+        color: white;
+
+        .mat-tag-num {
+
+            color: yellow;
+
+        }
+    }
+
+
 }
 </style>

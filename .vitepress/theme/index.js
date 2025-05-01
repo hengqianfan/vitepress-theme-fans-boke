@@ -3,7 +3,7 @@ import { useRoute } from 'vitepress'
 import { onMounted, watch, nextTick } from 'vue'
 
 
-import toc from './components/Toc/index.vue'
+
 
 import Mermaid from './components/Mermaid/index.vue'
 
@@ -46,7 +46,7 @@ export default {
 
   enhanceApp({ app, router, siteData }) {
 
-    app.component("toc", toc)
+
     app.component('Mermaid', Mermaid)
 
 

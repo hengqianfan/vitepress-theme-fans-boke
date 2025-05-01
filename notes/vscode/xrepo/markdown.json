@@ -1,0 +1,113 @@
+{
+    "换行Br": {
+        "prefix": "br",
+        "body": [
+            "<br/>"
+        ],
+        "description": "换行"
+    },
+    "图片引用": {
+        "prefix": "img",
+        "body": [
+            "![]($1)"
+        ],
+        "description": "换行"
+    },
+    "字体缩小_1": {
+        "prefix": "small1",
+        "body": [
+            "<small>$1</small>"
+        ]
+    },
+    "字体缩小_2": {
+        "prefix": "small2",
+        "body": [
+            "<small><small>$1</small></small>"
+        ]
+    },
+    "字体缩小_3": {
+        "prefix": "small3",
+        "body": [
+            "<small><small><small>$1</small></small></small>"
+        ]
+    },
+    "链接_新窗口": {
+        "prefix": "link_new",
+        "body": [
+            "[enter]($1){target=\"_blank\"}"
+        ],
+        "description": "新窗口链接"
+    },
+    "代码块_命令行": {
+        "prefix": "code-block_shell",
+        "body": [
+            "```shell",
+            "$1",
+            "```"
+        ]
+    },
+    "代码块_python": {
+        "prefix": "code-block_python",
+        "body": [
+            "```python",
+            "$1",
+            "```"
+        ]
+    },
+    "代码块_js": {
+        "prefix": "code-block_javascript",
+        "body": [
+            "```js",
+            "",
+            "$1",
+            "",
+            "```"
+        ],
+        "description": "js代码块"
+    },
+    "代码组_js": {
+        "prefix": "code-group_js",
+        "body": [
+            "::: code-group",
+            "",
+            "```js [$1]",
+            "$2",
+            "```",
+            "",
+            ":::"
+        ],
+        "description": "代码组，js"
+    },
+    "vitepress徽章_info": {
+        "prefix": "badge_info",
+        "body": [
+            "<Badge type='info'>$1</Badge>"
+        ]
+    },
+    "vitepress徽章_tip": {
+        "prefix": "badge_tip",
+        "body": [
+            "<Badge type='tip'>$1</Badge>"
+        ]
+    },
+    "vitepress徽章_warning": {
+        "prefix": "badge_warning",
+        "body": [
+            "<Badge type='warning'>$1</Badge>"
+        ]
+    },
+    "vitepress徽章_danger": {
+        "prefix": "badge_danger",
+        "body": [
+            "<Badge type='danger'>$1</Badge>"
+        ]
+    },
+    "自定义容器_danger": {
+        "prefix": "container_danger",
+        "body": [
+            "::: danger <Badge type='warning'>$1</Badge>",
+            "$2",
+            ":::"
+        ]
+    }
+}

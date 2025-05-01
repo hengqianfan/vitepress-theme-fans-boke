@@ -9,9 +9,15 @@
 
             <PageSites v-if="frontmatter.layout === 'xSites'" />
 
+            <PageNotes v-if="frontmatter.layout === 'xNotes'" />
+
             <MainDoc v-else />
 
+
+
         </div>
+
+
     </div>
 
 </template>
@@ -22,7 +28,11 @@ import { useData } from 'vitepress'
 import MainAside from '../MainAside/index.vue'
 import PageHome from '../page-home/index.vue'
 import PageSites from '../page-sites/index.vue'
+import PageNotes from '../PageNotes/index.vue'
+
+
 import MainDoc from '../MainDoc/index.vue'
+
 
 const { page, frontmatter } = useData()
 
