@@ -22,7 +22,6 @@ const getSocialLinkIcon = (momo) => {
 @use './app.scss';
 
 .xPerson {
-    margin: 10px;
 
     width: 260px;
     display: flex;

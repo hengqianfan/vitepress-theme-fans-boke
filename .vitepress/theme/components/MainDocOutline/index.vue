@@ -94,8 +94,8 @@ const toHeader = (mo) => {
     font-size: 0px;
 
 
-    box-shadow: 5px 5px 18px #dedede,
-        -5px -5px 18px #ffffff;
+    box-shadow: 3px 3px 6px #dedede,
+        -3px -3px 6px #ffffff;
 
 
 

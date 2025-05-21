@@ -7,9 +7,9 @@ id: 25031801
 cover: 'vitepresscover'
 
 ---
- 
-######  {{ $frontmatter.id? $frontmatter.id : $frontmatter.zoid }}
- 
+
+
+
 <br/>
 
 # 在 vitepress 中集成评论区
@@ -53,11 +53,20 @@ cover: 'vitepresscover'
 ![](/image/202503182353.png)
 
 
-### 1.4 创建评论区组件
+### 1.4 安装依赖
+
+在 `vitepress` 项目中安装依赖包
+
+```shell
+pnpm i @giscus/vue
+```
+
+
+### 1.5 创建评论区组件
 
 <br/>
 
-#### 1.4.1 获取配置参数
+#### 1.5.1 获取配置参数
 
 **`官网`**： https://giscus.app/zh-CN
 
@@ -76,8 +85,24 @@ cover: 'vitepresscover'
 
 ![](/image/202503190047.png)
 
+#### 1.5.2 创建组件
 
-#### 1.4.2 创建组件
+::: danger **💥常见错误**
+
+极有可能出现页面空白的情形   
+
+如果报错，把括号去掉  
+
+`import { Giscus } from '@giscus/vue'`  
+
+换为👇
+
+`import Giscus from '@giscus/vue'`  
+
+
+
+:::
+
 
 在 `.vitepress/theme/components` 目录下新建 `Comment.vue`：
 
@@ -140,3 +165,22 @@ export default {
     })
   },
 ```
+## 2. 集成 waline
+
+https://waline.js.org/
+
+
+### 2.1 使用 `vercel` 部署 
+
+#### 2.1.1 创建评论服务器
+
+> 点击此处快速创建
+
+https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwalinejs%2Fwaline%2Ftree%2Fmain%2Fexample
+
+
+::: details 若链接失效时，请参考此处
+
+https://waline.js.org/guide/deploy/vercel.html#%E5%A6%82%E4%BD%95%E9%83%A8%E7%BD%B2
+
+::: 

@@ -74,6 +74,8 @@ const { theme, page } = useData()
 
 <style lang="scss" scoped>
 .pn-all {
+    padding-bottom: 100px;
+
     .pn-notes-card {
         .pn-notes-card-title {
             width: 100px;
@@ -105,6 +107,8 @@ const { theme, page } = useData()
                 padding-left: 15px;
                 background-color: #ffffff;
                 // opacity: 0.5;
+
+                transition: all 0.8s;
 
                 .pn-notes-card-notes-note-icon {
                     width: 30px;
@@ -138,10 +142,14 @@ const { theme, page } = useData()
                     color: transparent;
                     transition: background 0.5s;
                     font-weight: 800;
+
+
                 }
 
 
             }
+
+
         }
     }
 }

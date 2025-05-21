@@ -72,18 +72,17 @@ const changeNavItem = (mo, no) => {
     padding-right: 50px;
     border-radius: 0 0 15px 15px;
 
-
-    box-shadow: 5px 5px 18px #dedede,
-        -5px -5px 18px #ffffff;
+    box-shadow: 2px 2px 5px #dedede,
+        -2px -2px 5px #ffffff;
 
     position: fixed;
 
     z-index: 1000;
 
     // 毛玻璃特效
-    // background-color: rgba(255, 255, 255, 0.5);
-    // -webkit-backdrop-filter: blur(20px);
-    // backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
 
 
 

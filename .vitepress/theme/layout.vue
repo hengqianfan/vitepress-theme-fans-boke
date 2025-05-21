@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 import xNav from './components/Nav/index.vue'
 import xMain from './components/Main/index.vue'
+import XBanner from './components/Banner/index.vue'
 
 
 
@@ -14,15 +15,14 @@ import xMain from './components/Main/index.vue'
     <div class="layout-all">
         <xNav />
 
+        <XBanner />
+
         <xMain />
 
     </div>
 
 
-
     <!-- <h1>Custom Layout!</h1> -->
-
-
 
 
     <!-- <NotFound v-if="page.isNotFound" /> -->
@@ -43,15 +43,14 @@ import xMain from './components/Main/index.vue'
         10px 100%;
     background-position: 0 0;
 
-
     width: 100%;
     min-height: 100vh;
 
 
+    display: flex;
+    flex-direction: column;
 
-    position: relative;
-
-
+    overflow: visible;
 
 }
 </style>

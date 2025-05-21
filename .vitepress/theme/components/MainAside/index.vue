@@ -58,11 +58,14 @@ import Clock from '../Clock/index.vue'
     display: flex;
     flex-direction: column;
     padding: 10px;
-    position: fixed;
+    // position: sticky;
+    position: absolute;
 
-    // overflow-y: scroll;
-    .ma-container {
+
+    .ma-container,
+    .ma-container div {
         overflow: scroll;
+        margin: 10px auto;
     }
 
 

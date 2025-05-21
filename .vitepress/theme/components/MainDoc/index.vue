@@ -1,7 +1,14 @@
 <template>
 
     <div class="vp-doc">
-        <MainDocAfter />
+
+        <div class="" v-if="boke.isShowDocAfter">
+
+            <MainDocAfter />
+
+        </div>
+
+
 
         <Content />
 
@@ -66,6 +73,7 @@ const isAbout = () => {
 onMounted(() => {
     boke.closePerson()
     boke.openOutline()
+
     if (isHome()) {
 
         boke.closeOutline()

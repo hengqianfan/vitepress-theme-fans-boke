@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    .Banner-all {
+        // background-color: rebeccapurple;
+        height: 30vh !important;
+        width: 100%;
+        background-image: url('/cover/pexels25052002.png');
+        // 宽度拉满，高度自动
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px !important;
+        flex-wrap: wrap;
+        color: white;
+        font-family: '金刚体';
+    }
+}

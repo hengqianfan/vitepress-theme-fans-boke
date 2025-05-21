@@ -110,5 +110,12 @@
         "kind": "编程",
         "icon": "/icon/vscode.png",
         "cover": "/cover/vscodecover.png"
+    },
+    {
+        "name": "游戏世界",
+        "link": "/notes/game/00 简述",
+        "kind": "其他",
+        "icon": "/icon/game.png",
+        "cover": "/cover/gamecover.png"
     }
 ]

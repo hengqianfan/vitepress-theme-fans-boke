@@ -800,6 +800,13 @@ export const sites_data = [
                         icon: 'deepseek',
                         intro: '宣传方面，有些用力过猛'
                     },
+                    {
+                        value: 'kimi',
+                        link: 'https://kimi.moonshot.cn/',
+                        icon: 'kimi',
+                        intro: 'deepseek把它顶下去了'
+
+                    }
 
 
                 ]
@@ -889,6 +896,13 @@ export const sites_data = [
                         icon: 'publiclogo',
                         intro: '公益提供表情包直链的网站'
                     },
+                    {
+                        value: 'Pexels',
+                        link: 'https://www.pexels.com',
+                        icon: 'pexels',
+                        intro: '免费的图片资源网站'
+                    },
+
                     {
                         value: '元气壁纸',
                         link: 'https://bizhi.cheetahfun.com/dn/c2d/',
@@ -1097,8 +1111,14 @@ export const sites_data = [
                         intro: '油猴脚本库'
                     },
                     {
+                        value: '吾爱破解',
+                        link: 'https://www.52pojie.cn/',
+                        icon: '52pojie',
+                        intro: '提供各种学习版软件'
+                    },
+
+                    {
                         value: '软件管家',
-                        // link: 'https://mp.weixin.qq.com/s/VfWKQ4WC2gsDGqdTC-wUkQ',
                         link: 'https://mp.weixin.qq.com/s/JmJdGcTduqmzxSdC-wokwA',
                         icon: 'wechat',
                         intro: '提供各种学习版软件'

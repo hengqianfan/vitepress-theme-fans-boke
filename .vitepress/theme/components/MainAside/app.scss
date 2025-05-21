@@ -1,13 +1,15 @@
 @media (max-width: 768px) {
     .xSide {
+        display: none !important;
         min-height: 80vh;
         display: flex;
         flex-direction: column !important;
+        align-items: center !important;
         padding: 10px;
         position: relative !important;
-        margin-top: 50px !important;
 
-        // overflow-y: scroll;
+
+
         .ma-container {
             overflow: scroll;
         }

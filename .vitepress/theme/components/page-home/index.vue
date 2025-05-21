@@ -63,6 +63,8 @@ const clearNavItemIndex = () => {
 </script>
 
 <style lang="scss" scoped>
+@use './app.scss';
+
 .articlesCards {
     display: flex;
     flex-wrap: wrap;
@@ -84,6 +86,7 @@ const clearNavItemIndex = () => {
             width: 100%;
             height: 200px;
             border-radius: 15px 15px 0 0;
+            overflow: hidden;
             transition: all 0.6s;
 
 
@@ -91,6 +94,8 @@ const clearNavItemIndex = () => {
                 width: 100%;
                 height: 100%;
                 border-radius: 15px 15px 0 0;
+                transition: all 0.6s;
+
             }
 
         }
@@ -173,9 +178,8 @@ const clearNavItemIndex = () => {
 
     .articlesCard:hover {
         .articlesCard-cover {
-            overflow: hidden;
-            transition: all 0.6s;
 
+            transition: all 0.6s;
 
             .articlesCard-cover-img {
                 transform: scale(1.3);

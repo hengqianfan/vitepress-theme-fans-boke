@@ -1,6 +1,6 @@
 <template>
 
-    <div class="mda-all" v-if="boke.isShowDocAfter">
+    <div class="mda-all">
 
         <div class="xdoc-after-time">{{ formatDate(frontmatter.id) }}</div>
         <div class="xdoc-after-tags">

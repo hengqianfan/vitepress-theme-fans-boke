@@ -19,7 +19,7 @@
         margin: 15px;
         margin-top: 30px;
         line-height: 28px;
-        font-size: 28px;
+        font-size: 30px;
         font-weight: 400;
         color: black;
 
@@ -36,11 +36,11 @@
     h3 {
         margin: 15px;
         margin-top: 30px;
-        line-height: 24px;
-        font-size: 20px;
+        line-height: 28px;
+        font-size: 28px;
         font-weight: 400;
         color: black;
-        // background-color: white;
+
         font-family: '优设标题黑';
         display: block;
         min-width: 100px;
@@ -49,10 +49,10 @@
     }
 
     h4 {
-        font-size: 18px;
+        font-size: 24px;
         margin: 10px;
-        line-height: 24px;
-        font-size: 16px;
+        line-height: 26px;
+
         font-weight: 400;
 
         font-family: '优设标题黑';
@@ -62,8 +62,9 @@
     h6 {
         margin: 10px;
         line-height: 24px;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 400;
+
 
         font-family: '优设标题黑';
     }
@@ -214,7 +215,7 @@
 :root {
     code {
         background-color: #456ca0;
-        color: white;
+        // color: white;
         padding: 3px;
         border-radius: 6px;
         font-family: '优设标题黑';
@@ -222,11 +223,10 @@
     }
 
     div[class*='language-'] {
-        // background-color: wheat;
 
         margin: 20px 0;
         border-radius: 12px;
-        // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
 
         code {
             font-family: 'Inter';
@@ -237,7 +237,11 @@
 
 }
 
-
+.vp-doc {
+    overflow: visible !important;
+    position: relative !important;
+    // background-color: #191f18 !important;
+}
 
 
 

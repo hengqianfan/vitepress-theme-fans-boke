@@ -47,19 +47,36 @@ const { page, frontmatter } = useData()
 .xMain-all {
     display: flex;
     flex-direction: row;
-    margin: 0 5%;
-    padding-top: 80px;
+    margin: 10px 5%;
+    // padding-top: 80px;
     width: 90%;
 
-    position: relative;
+    z-index: 20;
+    position: -webkit-sticky;
+    position: sticky !important;
+    top: 100px;
+
+    margin-top: 10px;
+
+
+
+
+
+    // background-color: red;
+
+
 
 
     .xMain-content {
 
-        margin: 10px 0 0 300px;
+        margin: 30px 0 0 300px;
+        // padding-top: 10px;
+
+
 
         width: 80%;
         min-height: 60vh;
+
 
 
     }
