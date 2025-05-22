@@ -2,17 +2,23 @@
     <div class="xPerson">
         <img src="/icon/logo.png" class="xPerson-icon">
 
+
+
         <div class="xPerson-intro">{{ xData.PersonIntro }}</div>
         <div class="xPerson-links">
             <a class="xPerson-links-icon" v-for="item in xData.PersonSocialLinks" :href="item.link" target="_blank">
                 <i :class="getSocialLinkIcon(item.name)"></i>
             </a>
         </div>
+
+        <clock />
     </div>
 </template>
 
 <script setup>
 import xData from '../../../../data/main.json'
+import clock from '../Clock/index.vue'
+
 const getSocialLinkIcon = (momo) => {
     return `iconfont icon-${momo}`
 }
@@ -27,14 +33,11 @@ const getSocialLinkIcon = (momo) => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+
     border-radius: 10px;
 
     background-color: white;
 
-
-    box-shadow: 1px 1px 3px #dedede,
-        -1px -1px 3px #f5f0f0;
 
     box-shadow: 5px 5px 18px #dedede,
         -5px -5px 18px #ffffff;
@@ -44,7 +47,8 @@ const getSocialLinkIcon = (momo) => {
         width: 60px;
         height: 60px;
         padding: 5px;
-        // background-color: gainsboro;
+        margin-top: 10px;
+
         border-radius: 5px;
         box-shadow: 1px 1px 3px #dedede,
             -1px -1px 3px #f5f0f0;

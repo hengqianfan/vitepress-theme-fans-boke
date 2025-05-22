@@ -47,8 +47,9 @@ const { page, frontmatter } = useData()
 .xMain-all {
     display: flex;
     flex-direction: row;
-    margin: 10px 5%;
-    // padding-top: 80px;
+    margin: 0px 5%;
+
+
     width: 90%;
 
     z-index: 20;
@@ -56,7 +57,7 @@ const { page, frontmatter } = useData()
     position: sticky !important;
     top: 100px;
 
-    margin-top: 10px;
+
 
 
 
@@ -69,7 +70,7 @@ const { page, frontmatter } = useData()
 
     .xMain-content {
 
-        margin: 30px 0 0 300px;
+        margin: 30px 0 0 320px;
         // padding-top: 10px;
 
 

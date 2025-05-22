@@ -13,10 +13,10 @@
                 <MainAsidePerson />
             </div>
 
-
+            <!-- 
             <div v-if="boke.isShowClock">
                 <Clock />
-            </div>
+            </div> -->
 
 
 
@@ -25,7 +25,7 @@
 
 
 
-            <MainAsideSearch />
+            <!-- <MainAsideSearch /> -->
 
             <MainAsideTags />
 
@@ -57,15 +57,15 @@ import Clock from '../Clock/index.vue'
     min-height: 80vh;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    // position: sticky;
+
     position: absolute;
 
 
     .ma-container,
     .ma-container div {
         overflow: scroll;
-        margin: 10px auto;
+        margin: 8px auto;
+        padding: 10px;
     }
 
 

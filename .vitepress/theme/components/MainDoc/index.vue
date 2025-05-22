@@ -16,7 +16,7 @@
             <MainDocOutline />
         </div>
 
-        <div class="">
+        <div class="" v-if="isOpen()">
             <comment />
         </div>
 
@@ -35,19 +35,29 @@ import { onMounted, onUpdated, watch, ref } from 'vue';
 import { useBokeStore } from '../../../../stores/boke';
 import { useNotesStore } from '../../../../stores/notes';
 
+const { frontmatter } = useData()
 
+const isOpen = () => {
+
+    if (frontmatter.value) {
+        if (frontmatter.value.layout == 'xhome') {
+            return false
+        }
+    }
+
+
+
+}
 
 const boke = useBokeStore()
 
-
-const notes = useNotesStore()
 
 const { page } = useData()
 
 
 const isHome = () => {
     let path = page.value.relativePath
-    console.log(path);
+
 
     if (path == 'index.md') {
         return true
@@ -58,7 +68,6 @@ const isHome = () => {
 
 const isAbout = () => {
     let path = page.value.relativePath
-    console.log(path);
 
     if (path == 'pages/about.md') {
         return true

@@ -5,8 +5,11 @@
 
             <div class=xNav-siteName @click="changeNavItem(0, `/`)">{{ xdata.SiteName }}</div>
 
+
+
         </div>
         <div class="xNav-right">
+            <NavSearch />
             <div class="xNav-menu">
                 <div :class="['xNav-menu-item', { 'active': boke.nowActiveNavItem == index }]"
                     v-for="(item, index) in xdata.NavList" @click="changeNavItem(index, item.link)">{{ item.name }}
@@ -21,6 +24,9 @@ import { ref } from 'vue';
 import { useRouter } from 'vitepress'
 import xdata from '../../../../data/main.json'
 import { useBokeStore } from '../../../../stores/boke'
+import NavSearch from '../NavSearch/index.vue'
+
+
 
 const boke = useBokeStore()
 

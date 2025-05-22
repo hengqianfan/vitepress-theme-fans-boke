@@ -101,6 +101,8 @@ const toHeader = (mo) => {
 
     transition: all 0.7s;
 
+
+
     .outline-title {
 
 
@@ -120,7 +122,7 @@ const toHeader = (mo) => {
     width: 320px;
     padding: 20px;
     height: auto;
-    font-size: 16px;
+    font-size: 14px;
     background-color: white;
 
     a {

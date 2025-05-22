@@ -1,11 +1,17 @@
 <template>
     <div class="mat-all" v-if="boke.isShowTags">
-        <div class="mat-tag" v-for="it in posts.tags" @click="posts.changeNowTag(it[0])">
-            <div class="mat-tag-name"> {{ it[0] }}</div>
-            <div class="mat-tag-num">{{ it[1] }}</div>
+        <div class="mat-name">标签分类</div>
+
+        <div class="mat-tags">
+            <div class="mat-tag" v-for="it in posts.tags" @click="posts.changeNowTag(it[0])">
+                <div class="mat-tag-name"> {{ it[0] }}</div>
+                <div class="mat-tag-num">{{ it[1] }}</div>
 
 
+            </div>
         </div>
+
+
     </div>
 
 </template>
@@ -21,63 +27,86 @@ const boke = useBokeStore()
 .mat-all {
     margin: 10px;
     margin-top: 30px;
+    padding: 15px;
+
     width: 260px;
     height: 300px;
-    padding: 20px;
+
     background-color: white;
 
     box-shadow: 2px 2px 8px #dedede,
         -2px -2px 8px #ffffff;
     border-radius: 10px;
+
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow-y: scroll;
+    flex-direction: column;
 
-    .mat-tag {
-        min-width: 50px;
-        height: 26px;
-        line-height: 26px;
-        text-align: center;
-        padding: 10px;
-        background-color: #ebeef07e;
-        margin: 5px;
+
+
+    .mat-name {
+        margin: 10px;
+
+
+        color: #c0bbbb;
+        font-size: 12px;
+    }
+
+    .mat-tags {
+
+
         display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 13px;
-        font-family: '优设标题黑';
-        border-radius: 8px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow-y: scroll;
+
+        .mat-tag {
+            min-width: 50px;
+            height: 20px;
+            line-height: 26px;
+            text-align: center;
+            padding: 10px;
+            background-color: #ebeef07e;
+            margin: 5px 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            font-family: '优设标题黑';
+            border-radius: 8px;
 
 
-        color: #3071c7;
+            color: #3071c7;
 
-        box-shadow: 2px 2px 3px #dedede,
-            -2px -2px 3px #ffffff;
 
-        position: relative;
+            box-shadow: 2px 2px 3px #dedede,
+                -2px -2px 3px #ffffff;
 
-        .mat-tag-num {
-            margin-left: 5px;
-            color: #706b6b;
+            position: relative;
 
-            font-size: 10px;
+            .mat-tag-num {
+                margin-left: 5px;
+                color: #706b6b;
 
+                font-size: 10px;
+
+            }
+
+            // color: rgb(72, 138, 109);
         }
 
-        // color: rgb(72, 138, 109);
-    }
+        .mat-tag:hover {
+            background-color: #3071c7;
+            color: white;
 
-    .mat-tag:hover {
-        background-color: #3071c7;
-        color: white;
+            .mat-tag-num {
 
-        .mat-tag-num {
+                color: yellow;
 
-            color: yellow;
-
+            }
         }
     }
+
+
 
 
 }

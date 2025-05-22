@@ -8,6 +8,10 @@ import { onMounted, watch, nextTick } from 'vue'
 import Mermaid from './components/Mermaid/index.vue'
 
 
+
+import xVideo from './components/xVideo/index.vue'
+
+
 import mediumZoom from 'medium-zoom'
 
 
@@ -48,6 +52,8 @@ export default {
 
 
     app.component('Mermaid', Mermaid)
+
+    app.component('xVideo', xVideo)
 
 
     // pinia

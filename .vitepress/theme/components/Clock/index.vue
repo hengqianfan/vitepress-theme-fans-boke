@@ -1,8 +1,8 @@
 <template>
     <div class="clock-all">
-        <div class="clock">
-            {{ now_time }}
-        </div>
+
+        {{ now_time }}
+
 
     </div>
 </template>
@@ -57,28 +57,26 @@ function getToday() {
 @use './app.scss';
 
 .clock-all {
-    margin: 10px;
-    margin-top: 30px;
-    width: 260px;
-    padding: 20px;
+
+
+    padding: 5px 15px;
+
     background-color: white;
-
-    box-shadow: 2px 2px 8px #dedede,
-        -2px -2px 8px #ffffff;
     border-radius: 10px;
+    margin: 10px;
 
 
-    .clock {
-        height: 45px;
-        font-size: 20px;
-        font-family: '优设标题黑';
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 20px;
-        box-shadow: 0.1875rem 0.1875rem .125rem #f0f0f0 inset,
-            -0.1875rem -0.1875rem .125rem #faf8f8 inset;
-    }
+    color: rgb(86, 86, 218);
+    color: rgb(109, 44, 55);
+    font-size: 14px;
+    font-family: '优设标题黑';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0.1875rem 0.1875rem .125rem #f0f0f0 inset,
+        -0.1875rem -0.1875rem .125rem #faf8f8 inset;
+
 
 
 }
