@@ -12,7 +12,8 @@
             <NavSearch />
             <div class="xNav-menu">
                 <div :class="['xNav-menu-item', { 'active': boke.nowActiveNavItem == index }]"
-                    v-for="(item, index) in xdata.NavList" @click="changeNavItem(index, item.link)">{{ item.name }}
+                    v-for="(item, index) in xdata.NavList" @click="changeNavItem(index, item.link)
+                        ">{{ item.name }}
                 </div>
             </div>
         </div>

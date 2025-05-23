@@ -217,7 +217,16 @@ export const sites_data = [
                         icon: 'vercel',
                         intro: '可以同步 Github Page 的平台'
 
+                    },
+                    {
+                        value: '缤纷云',
+                        link: 'https://www.bitiful.com/',
+                        icon: 'bitiful',
+                        intro: '对象存储服务'
+
                     }
+
+
                     // {
                     //     value: '稳连云',
                     //     link: 'https://xn--9kqq77hqun.me/#/dashboard',
@@ -840,6 +849,14 @@ export const sites_data = [
             {
                 value: 'AI相关网站',
                 children: [
+
+                    {
+
+                        value: 'NoCode',
+                        link: 'https://nocode.cn/',
+                        icon: 'ai',
+                        intro: '美团旗下的零代码开发平台'
+                    },
                     {
 
                         value: 'AI研究站',

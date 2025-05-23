@@ -1,0 +1,89 @@
+@media (max-width: 768px) {
+
+
+    .pn-all {
+        padding: 10px !important;
+        padding-bottom: 100px;
+
+
+        .pn-notes-card {
+
+            .pn-notes-card-title {
+                width: 80px !important;
+                height: 40px;
+                line-height: 40px;
+                font-family: "优设标题黑";
+                border-bottom: 2px dashed rgb(114, 114, 187);
+                text-align: center;
+                margin-bottom: 20px;
+
+                // background-color: rebeccapurple;
+            }
+
+            .pn-notes-card-notes {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 20px;
+
+                .pn-notes-card-notes-note {
+                    margin: 10px !important;
+                    width: 150px !important;
+                    height: 50px !important;
+
+                    box-shadow: 5px 5px 10px #dedede,
+                        -5px -5px 10px #ffffff;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 15px;
+                    background-color: #ffffff;
+                    // opacity: 0.5;
+
+                    transition: all 0.8s;
+
+                    .pn-notes-card-notes-note-icon {
+                        width: 20px !important;
+                        height: 20px !important;
+
+                        border-radius: 6px;
+                        box-shadow: 2px 2px 5px #dedede,
+                            -2px -2px 5px #ffffff;
+
+                    }
+
+                    .pn-notes-card-notes-note-title {
+
+                        margin-left: 5px !important;
+                        height: 30px !important;
+                        line-height: 30px;
+
+                        padding: 0 10px !important;
+                        border-radius: 5px;
+                        font-family: '优设标题黑';
+                        font-size: 12px !important;
+                        color: rgb(80, 80, 80);
+                        transition: all 1s;
+
+                    }
+
+                    .pn-notes-card-notes-note-title:hover {
+                        background: linear-gradient(45deg, #1d7e76, #6eb0ca, #5464b3, #3a2d8a, #432768, #b0339d);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        color: transparent;
+                        transition: background 0.5s;
+                        font-weight: 800;
+
+
+                    }
+
+
+                }
+
+
+            }
+        }
+    }
+
+
+}

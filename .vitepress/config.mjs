@@ -9,6 +9,10 @@ export default defineConfig({
   description: "衡千帆的世界",
   base: xdata.base,
   outDir: './.vitepress/dist',
+  // 标签页的LOGO
+  head: [
+    ['link', { rel: 'icon', href: './icon/logo.png' }]
+  ],
   themeConfig: {
 
     nav: [

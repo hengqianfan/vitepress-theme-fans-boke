@@ -60,6 +60,7 @@ const boke = useBokeStore()
         overflow-y: scroll;
 
         .mat-tag {
+            // 原样式
             min-width: 50px;
             height: 20px;
             line-height: 26px;
@@ -73,20 +74,18 @@ const boke = useBokeStore()
             font-size: 12px;
             font-family: '优设标题黑';
             border-radius: 8px;
-
-
             color: #3071c7;
-
-
-            box-shadow: 2px 2px 3px #dedede,
-                -2px -2px 3px #ffffff;
-
+            box-shadow: 1px 1px 2px #dedede,
+                -1px -1px 2px #ffffff;
             position: relative;
 
+
+
             .mat-tag-num {
-                margin-left: 5px;
+                color: #3071c7;
                 color: #706b6b;
 
+                margin-left: 5px;
                 font-size: 10px;
 
             }

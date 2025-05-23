@@ -1,0 +1,198 @@
+@media (max-width: 768px) {
+    .xSites-all {
+        background-color: transparent;
+        width: 95%;
+        height: 88vh;
+        margin: 0 auto;
+
+
+
+        .xSites-nav {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 5px !important;
+            height: 150px !important;
+            background-color: #ffffff;
+
+            flex-wrap: wrap;
+            box-shadow: none !important;
+
+
+
+
+            .xSites-nav-item {
+                width: 60px !important;
+                height: 30px !important;
+                line-height: 30px;
+                margin-left: 15px;
+                background-color: white;
+                text-align: center;
+                border-radius: 5px;
+
+                font-family: '优设标题黑';
+
+                font-size: 12px !important;
+            }
+
+            .xSites-nav-item:hover {
+
+                background: linear-gradient(45deg, #1d7e76, #6eb0ca, #5464b3, #3a2d8a, #432768, #b0339d);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                transition: background 0.5s;
+            }
+        }
+
+        .xSites-content {
+            margin-top: 20px;
+            height: 80vh;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 5px 5px 18px #dedede,
+                -5px -5px 18px #ffffff;
+            display: flex;
+
+            flex-direction: column;
+            overflow-y: scroll;
+            padding: 10px !important;
+
+            .sites-card {
+                margin-top: 20px;
+                width: 100%;
+
+                display: flex;
+                flex-direction: column;
+
+
+                .sites-card-title {
+
+                    min-width: 60px !important;
+                    max-width: 120px;
+                    font-family: '剑豪体';
+                    font-size: 14px !important;
+                    border-bottom: 1px dashed rgb(39, 41, 131);
+                    padding-bottom: 5px;
+                    margin-bottom: 20px;
+                    text-align: center;
+
+
+                }
+
+                .sites {
+                    display: flex;
+                    flex-direction: row;
+                    width: 100%;
+                    flex-wrap: wrap;
+
+
+                    .site {
+
+                        margin: 5px !important;
+                        width: 140px !important;
+                        height: 60px !important;
+                        border: 2px white dotted;
+
+                        border-radius: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        padding: 5px 10px !important;
+
+
+                        box-shadow: 5px 5px 12px #dedede,
+                            -5px -5px 12px #f8f8f8;
+
+                        .site-info {
+                            display: flex;
+                            flex-direction: row;
+
+                            .site-icon {
+
+                                width: 20px !important;
+                                height: 20px !important;
+                                background-color: white;
+                                border-radius: 5px;
+                                padding: 2px;
+                                box-shadow: 2px 2px 3px #dedede,
+                                    -2px -2px 3px #f7f3f3;
+                            }
+
+                            .site-title {
+                                margin-left: 10px !important;
+                                height: 20px !important;
+                                line-height: 20px !important;
+                                font-size: 12px !important;
+                                font-weight: 600;
+                                font-family: 'zqk英文';
+
+                            }
+
+                        }
+
+                        .site-intro {
+                            margin-top: 5px;
+                            height: 20px !important;
+                            color: #948f8f;
+                            font-size: 9px !important;
+                            line-height: 10px !important;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+
+                    .site:hover {
+
+                        border: 2px rgb(109, 188, 219) dotted;
+                        background-color: white;
+
+                        transition: all 0.6s linear;
+
+                        box-shadow: none;
+
+                        background-image: none;
+
+
+
+                        .site-info {
+
+                            transition: all 0.6s linear;
+
+                            .site-icon {
+                                width: 40px;
+                                height: 40px;
+                                background-color: white;
+                                border-radius: 5px;
+                                padding: 2px;
+                                transition: all 0.6s linear;
+
+                            }
+
+                            .site-title {
+                                color: rgb(136, 166, 226);
+
+                                transition: all 0.6s linear;
+
+
+                            }
+
+                        }
+
+                        .site-intro {
+                            color: rgb(86, 172, 230);
+
+                            transition: all 0.6s linear;
+
+
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+}

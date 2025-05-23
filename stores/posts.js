@@ -102,18 +102,81 @@ const sort = (tag) => {
 // 初始化数据
 sort('全部文章')
 
+
+// 分页函数
+
+const paginate = (data, page, pageSize) => {
+
+    let start = (page - 1) * pageSize;
+    let end = start + pageSize;
+
+    return data.slice(start, end);
+}
+
+// 当前页
+const currentPage = ref(1);
+
+// 分页尺寸
+const pageSize = ref(12);
+
+// 
+const pagesTotal = ref(0)
+
+
+const getPagesTotal = (data, pageSize) => {
+    pagesTotal.value = Math.ceil(data.length / pageSize)
+    return Math.ceil(data.length / pageSize)
+}
+
+// 初始化分页数据
+pagesTotal.value = getPagesTotal(posts, pageSize.value)
+showedPosts.value = paginate(sortedPosts.value, 1, pageSize.value)
+
 export const usePostsStore = defineStore('posts', {
-    state: () => ({ tags: tags_arr, nowTag: tags_arr[0][0], showedPosts: showedPosts }),
+    state: () => ({
+        tags: tags_arr,
+
+        sortedPosts: sortedPosts,
+        showedPosts: showedPosts,
+
+        pagesTotal: pagesTotal,
+        currentPage: currentPage,
+        pageSize: pageSize,
+
+    }),
     actions: {
         changeActiveIndex(mo) {
             this.nowActiveNavItem = mo
         },
+        changeCurrentPage(mo) {
+            // 如果当前页码超过最大页码数时，等于最大页码数
+            if (mo > this.pagesTotal) {
+                mo = this.pagesTotal
+            }
+            // 如果当前页码小于 1 时，等于 1
+            if (mo < 1) {
+                mo = 1
+            }
+
+            this.showedPosts = paginate(sortedPosts.value, mo, this.pageSize)
+            this.currentPage = mo
+
+        },
 
         changeNowTag(tag) {
+            // 更新当前标签
             this.nowTag = tag
+            // 筛选文章
             sort(tag)
-            this.showedPosts = showedPosts.value
-            // console.log(mo);
+            // 更新页面
+            this.showedPosts = paginate(sortedPosts.value, 1, this.pageSize)
+
+            this.pagesTotal = getPagesTotal(sortedPosts.value, pageSize.value)
+
+            // 文章分类改变时，将底部当前页复位为 1 
+            this.currentPage = 1
+
+
         }
 
     }

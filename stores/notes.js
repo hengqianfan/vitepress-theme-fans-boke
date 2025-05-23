@@ -49,6 +49,7 @@ const setDirectory = (mo) => {
 }
 
 
+
 export const useNotesStore = defineStore('notes', {
     state: () => ({
         AllNotesKinds: getAllNotesKinds(),

@@ -10,6 +10,7 @@ export const useBokeStore = defineStore('boke', {
             isShowTags: false,
             isShowDocAfter: true,
             isShowOutline: false,
+            isShowOutlineInterior: true,
             isShowPerson: true,
             isShowDirectory: false,
             isShowClock: false
@@ -58,6 +59,19 @@ export const useBokeStore = defineStore('boke', {
             this.isShowOutline = false
 
         },
+        openOutlineInterior() {
+            this.isShowOutlineInterior = true
+        },
+
+        closeOutlineInterior() {
+            this.isShowOutlineInterior = false
+
+        },
+
+        changeOutlineInterior() {
+            this.isShowOutlineInterior = !this.isShowOutlineInterior
+        },
+
 
         closeClock() {
             this.isShowClock = false
@@ -66,6 +80,18 @@ export const useBokeStore = defineStore('boke', {
             this.isShowClock = true
 
         }
+        // initPageLayout(mo) {
+        //     // 当是首页时
+        //     if (mo === '/') {
+        //         this.isShowTags = true
+
+        //         // 当是关于页时
+        //     } else if (mo === '/pages/about') {
+        //         this.isShowOutline = true
+        //     }
+        //     return mo
+
+        // }
 
 
     }

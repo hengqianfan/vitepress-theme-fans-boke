@@ -48,17 +48,18 @@ onMounted(() => {
     boke.closeOutline()
     boke.openPerson()
 
-
 })
 
 </script>
 
 <style lang="scss" scoped>
+@use './app.scss';
+
 .xSites-all {
     background-color: transparent;
-    width: 100%;
+    width: 95%;
     height: 88vh;
-
+    margin: 0 auto;
 
 
     .xSites-nav {
@@ -70,9 +71,10 @@ onMounted(() => {
         padding: 10px;
         height: 60px;
         background-color: #ffffff;
+        // background-color: aliceblue;
 
-        box-shadow: 5px 5px 18px #dedede,
-            -5px -5px 18px #ffffff;
+        box-shadow: 2px 2px 4px #dedede,
+            -2px -2px 4px #f4f2f2;
 
 
 
@@ -94,6 +96,15 @@ onMounted(() => {
 
 
         }
+
+        .xSites-nav-item:hover {
+
+            background: linear-gradient(45deg, #1d7e76, #6eb0ca, #5464b3, #3a2d8a, #432768, #b0339d);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: background 0.5s;
+        }
     }
 
     .xSites-content {
@@ -104,13 +115,14 @@ onMounted(() => {
         box-shadow: 5px 5px 18px #dedede,
             -5px -5px 18px #ffffff;
         display: flex;
+
         flex-direction: column;
         overflow-y: scroll;
         padding: 30px;
 
         .sites-card {
             margin-top: 20px;
-            width: 1240px;
+            width: 100%;
 
             display: flex;
             flex-direction: column;
@@ -138,6 +150,7 @@ onMounted(() => {
             .sites {
                 display: flex;
                 flex-direction: row;
+                width: 100%;
                 flex-wrap: wrap;
 
 
@@ -155,8 +168,8 @@ onMounted(() => {
                     padding: 10px 20px;
 
 
-                    box-shadow: 5px 5px 12px #dedede,
-                        -5px -5px 12px #f8f8f8;
+                    box-shadow: 2px 2px 10px #dedede,
+                        -2px -2px 10px #f8f8f8;
 
                     .site-info {
                         display: flex;

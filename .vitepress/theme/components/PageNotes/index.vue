@@ -73,6 +73,8 @@ const { theme, page } = useData()
 </script>
 
 <style lang="scss" scoped>
+@use './app.scss';
+
 .pn-all {
     padding-bottom: 100px;
 

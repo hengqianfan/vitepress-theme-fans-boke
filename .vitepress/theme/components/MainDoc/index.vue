@@ -8,9 +8,12 @@
 
         </div>
 
+        <div class="vp-doc-content">
+            <Content />
+        </div>
 
 
-        <Content />
+
 
         <div class="outline" v-if="boke.isShowOutline">
             <MainDocOutline />
@@ -29,11 +32,12 @@ import MainDocAfter from '../MainDocAfter/index.vue'
 import MainDocOutline from '../MainDocOutline/index.vue'
 import comment from '../comment/index.vue'
 
-
 import { Content, withBase, useData } from 'vitepress';
 import { onMounted, onUpdated, watch, ref } from 'vue';
 import { useBokeStore } from '../../../../stores/boke';
 import { useNotesStore } from '../../../../stores/notes';
+
+const notes = useNotesStore()
 
 const { frontmatter } = useData()
 
@@ -77,11 +81,23 @@ const isAbout = () => {
 
 }
 
+const isSites = () => {
+    let path = page.value.relativePath
+
+    if (path == 'pages/sites.md') {
+        return true
+    } else {
+        return false
+    }
+
+}
+
 
 
 onMounted(() => {
     boke.closePerson()
     boke.openOutline()
+
 
     if (isHome()) {
 
@@ -90,8 +106,35 @@ onMounted(() => {
     } else if (isAbout()) {
         boke.openOutline()
 
+
+    } else if (isSites()) {
+        boke.closeOutline()
     }
 
+})
+
+
+onUpdated(() => {
+    boke.closePerson()
+    boke.openOutline()
+
+    if (isHome()) {
+
+        boke.closeOutline()
+        boke.openPerson()
+    } else if (isAbout()) {
+        boke.openPerson()
+        boke.openOutline()
+
+
+    } else if (isSites()) {
+        boke.closeOutline()
+        boke.openPerson()
+    }
+
+    // if (page.value.headers.length == 0) {
+    //     isShow.value = false
+    // }
 
 })
 
@@ -113,6 +156,10 @@ a {
     position: relative;
     height: auto;
     background-color: transparent;
+
+    .vp-doc-content {
+        padding: 10px;
+    }
 
     .outline {
         position: fixed;

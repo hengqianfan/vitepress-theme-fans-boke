@@ -75,6 +75,8 @@ const toSearch = () => {
 </script>
 
 <style lang="scss" scoped>
+@use './app.scss';
+
 .mas-all {
     margin: 0px 100px;
     // margin-left: 20px;
@@ -125,10 +127,10 @@ const toSearch = () => {
 
     .mas-engine-menu {
         position: absolute;
-
+        padding: 0px 5px;
         display: flex;
         height: 40px;
-        width: 400px;
+        width: 410px;
         background-color: white;
         z-index: 100;
         border-radius: 10px;

@@ -1,27 +1,48 @@
 <template>
-    <div class="articlesCards">
+    <div class="ph-all">
 
-        <div class="articlesCard" v-for="item in posts.showedPosts" @click="clearNavItemIndex()">
-            <div class="articlesCard-cover">
-                <img :src="withBase(getImgSrc(item.frontmatter.cover))" alt="" class="articlesCard-cover-img">
-            </div>
+        <div class="articlesCards">
 
-
-            <a class="articlesCard-title" :href="withBase(item.url)" @click="boke.closeTags(), boke.openOutline()">
-                {{ getPostName(item.url) }}
-            </a>
-
-            <div class="articlesCard-info">
-                <div class="articlesCard-time">{{ formatDate(item.frontmatter.id) }}</div>
-                <div class="articlesCard-tags">
-                    <div class="articlesCard-tag" v-for="tag in item.frontmatter.tags.slice(0, 3)"
-                        @click="posts.changeNowTag(tag)">{{ tag }}</div>
+            <div class="articlesCard" v-for="item in posts.showedPosts" @click="clearNavItemIndex()">
+                <div class="articlesCard-cover">
+                    <img :src="withBase(getImgSrc(item.frontmatter.cover))" alt="" class="articlesCard-cover-img">
                 </div>
+
+
+                <a class="articlesCard-title" :href="withBase(item.url)" @click="boke.closeTags(), boke.openOutline()">
+                    {{ getPostName(item.url) }}
+                </a>
+
+                <div class="articlesCard-info">
+                    <div class="articlesCard-time">{{ formatDate(item.frontmatter.id) }}</div>
+                    <div class="articlesCard-tags">
+                        <div class="articlesCard-tag" v-for="tag in item.frontmatter.tags.slice(0, 3)"
+                            @click="posts.changeNowTag(tag)">{{ tag }}</div>
+                    </div>
+                </div>
+                <!-- <div>{{ item }}</div> -->
+
             </div>
-            <!-- <div>{{ item }}</div> -->
+        </div>
+
+
+
+        <div class="ph-paginate">
+
+            <div class="ph-paginate-button" @click="posts.changeCurrentPage(posts.currentPage - 1)">上一页</div>
+
+            <div class="ph-paginate-data">{{ posts.currentPage }} &nbsp / &nbsp {{+ posts.pagesTotal }}</div>
+
+            <div class="ph-paginate-button" @click="posts.changeCurrentPage(posts.currentPage + 1)">下一页</div>
 
         </div>
+
+
+
     </div>
+
+
+
 </template>
 
 <script setup>
@@ -35,7 +56,6 @@ const posts = usePostsStore()
 const { page } = useData()
 
 onMounted(() => {
-
 
     boke.closeDocAfter()
     boke.closeDirectory()
@@ -65,129 +85,172 @@ const clearNavItemIndex = () => {
 <style lang="scss" scoped>
 @use './app.scss';
 
-.articlesCards {
+.ph-all {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 
-    .articlesCard {
-        margin: 10px;
-        width: 320px;
-        min-height: 200px;
+    margin-bottom: 100px;
 
-        border-radius: 15px;
-        background-color: white;
+    .articlesCards {
+        display: flex;
+        flex-wrap: wrap;
 
-        padding-bottom: 10px;
+        .articlesCard {
+            margin: 10px;
+            width: 320px;
+            min-height: 200px;
 
-        box-shadow: 1px 1px 2px #dedede,
-            -1px -1px 2px #f5f0f0;
+            border-radius: 15px;
+            background-color: white;
 
-        .articlesCard-cover {
-            width: 100%;
-            height: 200px;
-            border-radius: 15px 15px 0 0;
-            overflow: hidden;
-            transition: all 0.6s;
+            padding-bottom: 10px;
 
+            box-shadow: 1px 1px 2px #dedede,
+                -1px -1px 2px #f5f0f0;
 
-            .articlesCard-cover-img {
+            .articlesCard-cover {
                 width: 100%;
-                height: 100%;
+                height: 200px;
                 border-radius: 15px 15px 0 0;
+                overflow: hidden;
                 transition: all 0.6s;
+
+
+                .articlesCard-cover-img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 15px 15px 0 0;
+                    transition: all 0.6s;
+
+                }
 
             }
 
-        }
 
 
-
-        .articlesCard-title {
-            width: 100%;
-            height: 50px;
-            line-height: 50px;
-            text-align: center;
-            font-size: 20px;
-            background-color: white;
-            font-family: "优设标题黑";
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .articlesCard-title:hover {
-            background: linear-gradient(45deg, #ef9393, #7e7e21, #ffff00, #b74b4b, #72a472, #646493);
-            background: linear-gradient(45deg, #1d7e76, #6eb0ca, #5464b3, #3a2d8a, #432768, #b0339d);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            transition: background 0.5s;
-        }
-
-        .articlesCard-info {
-            display: flex;
-            height: 30px;
-            align-items: center;
-            justify-content: space-between;
-            background-color: white;
-
-            .articlesCard-time {
-                margin-left: 10px;
+            .articlesCard-title {
+                width: 100%;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                font-size: 20px;
+                background-color: white;
+                font-family: "优设标题黑";
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 5px;
-                height: 20px;
-                color: #828e98;
-                // background-color: #afbdc8;
-                font-size: 10px;
-                border-radius: 5px;
-                margin-right: 20px;
-
             }
 
-            .articlesCard-tags {
-                display: flex;
-                margin-right: 10px;
+            .articlesCard-title:hover {
+                background: linear-gradient(45deg, #ef9393, #7e7e21, #ffff00, #b74b4b, #72a472, #646493);
+                background: linear-gradient(45deg, #1d7e76, #6eb0ca, #5464b3, #3a2d8a, #432768, #b0339d);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                transition: background 0.5s;
+            }
 
-                .articlesCard-tag {
-                    margin: 0 5px;
+            .articlesCard-info {
+                display: flex;
+                height: 30px;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+
+                .articlesCard-time {
+                    margin-left: 10px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     padding: 5px;
                     height: 20px;
-                    line-height: 20px;
-                    // font-family: '楷体';
-                    color: #7f8488;
-                    color: #7d7e86;
-                    // color: black;
-                    font-weight: 400;
-                    background-color: #e0e4e6;
+                    color: #828e98;
+                    // background-color: #afbdc8;
                     font-size: 10px;
                     border-radius: 5px;
+                    margin-right: 20px;
+
                 }
 
-                .articlesCard-tag:hover {
-                    background-color: #2d5296;
-                    color: white;
+                .articlesCard-tags {
+                    display: flex;
+                    margin-right: 10px;
+
+                    .articlesCard-tag {
+                        margin: 0 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 5px;
+                        height: 20px;
+                        line-height: 20px;
+                        // font-family: '楷体';
+                        color: #7f8488;
+                        color: #7d7e86;
+                        // color: black;
+                        font-weight: 400;
+                        background-color: #e0e4e6;
+                        font-size: 10px;
+                        border-radius: 5px;
+                    }
+
+                    .articlesCard-tag:hover {
+                        background-color: #2d5296;
+                        color: white;
+                    }
                 }
             }
         }
-    }
 
-    .articlesCard:hover {
-        .articlesCard-cover {
+        .articlesCard:hover {
+            .articlesCard-cover {
 
-            transition: all 0.6s;
-
-            .articlesCard-cover-img {
-                transform: scale(1.3);
                 transition: all 0.6s;
 
+                .articlesCard-cover-img {
+                    transform: scale(1.3);
+                    transition: all 0.6s;
 
+
+                }
             }
         }
     }
+
+
+    .ph-paginate {
+
+        display: flex;
+        margin: 0 auto;
+        margin-top: 20px;
+
+        .ph-paginate-button {
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            margin: 0 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 2px 2px 4px #dedede,
+                -2px -2px 4px #ffffff;
+            background-color: white;
+
+        }
+
+
+        .ph-paginate-item {
+            background-color: #d5d3da;
+            margin: 0 20px;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 5px;
+            color: white;
+            font-size: 12px;
+        }
+    }
+
 }
 </style>

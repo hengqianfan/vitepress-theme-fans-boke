@@ -1,6 +1,11 @@
 <template>
     <div class="mad-all">
 
+        该组处在开发中阶段！
+
+
+        <br>
+
         <div class="mad-title1" v-for="it in notes.NowDirectory">
 
             <div class="" v-if="it.items">
@@ -9,7 +14,9 @@
 
 
                 {{ it.text }}
-                <!-- <i @click="changeCollapsed()">+</i> -->
+
+
+
 
 
 
@@ -59,6 +66,7 @@
 </template>
 
 <script setup>
+
 import { useData, withBase } from 'vitepress'
 import { ref, onMounted, onUpdated } from 'vue'
 import { useBokeStore } from '../../../../stores/boke'
@@ -90,8 +98,6 @@ const isPage = () => {
 onMounted(() => {
     updateDirectory()
 
-    // if(page.value.relativePath)
-    // 
 }
 )
 
@@ -127,10 +133,10 @@ const changeCollapsed = (mo) => {
 
 <style lang="scss" scoped>
 .mad-all {
-    // margin-top: 30px;
+
     width: 260px;
     height: 800px;
-    padding: 20px;
+    padding: 30px;
     background-color: white;
 
     box-shadow: 2px 2px 8px #dedede,
@@ -140,9 +146,11 @@ const changeCollapsed = (mo) => {
     flex-direction: column;
     overflow-y: scroll;
 
+    // background-color: rebeccapurple;
+
     .mad-title1 {
         // background-color: rebeccapurple;
-        // width: 200px;
+
         margin-top: 10px;
         font-size: 15px;
         color: rgb(30, 30, 30);
