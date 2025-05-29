@@ -3,6 +3,7 @@ import { useData } from 'vitepress'
 import xNav from './components/Nav/index.vue'
 import xMain from './components/Main/index.vue'
 import XBanner from './components/Banner/index.vue'
+import bokeMain from '../../data/main.json'
 
 
 
@@ -43,14 +44,18 @@ import XBanner from './components/Banner/index.vue'
         10px 100%;
     background-position: 0 0;
 
-    width: 100%;
-    min-height: 100vh;
 
+
+    width: 100%;
+    min-height: 20vh;
 
     display: flex;
     flex-direction: column;
 
     overflow: visible;
+
+    // background-color: #1d4bad;
+
 
 }
 </style>

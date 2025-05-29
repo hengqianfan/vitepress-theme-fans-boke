@@ -19,13 +19,15 @@
 
             <div class="outline-two" v-for="item in page.headers">
 
-                <a :href="withBase(toHeader(item.title))" @click="boke.isShowOutlineInterior = false">
+                <!-- @click="boke.isShowOutlineInterior = false" -->
+                <a :href="withBase(toHeader(item.title))">
                     {{ item.title }}
                 </a>
 
 
                 <div class="outline-three" v-for="item3 in item.children">
-                    <a :href="withBase(toHeader(item3.title))"> &nbsp &nbsp{{ item3.title }}</a>
+                    <a :href="withBase(toHeader(item3.title))"> &nbsp
+                        &nbsp{{ item3.title }}</a>
 
                     <div class="outline-four" v-for="item4 in item3.children">
                         <a :href="withBase(toHeader(item4.title))">
@@ -50,78 +52,7 @@ import { useNotesStore } from '../../../../stores/notes';
 
 const boke = useBokeStore()
 
-const notes = useNotesStore()
-
-
-const isShow = ref(true)
-
-
 const { page } = useData()
-
-
-
-
-const isAbout = () => {
-    let path = page.value.relativePath
-
-
-    if (path == 'pages/about.md') {
-        return true
-    } else {
-        return false
-    }
-
-}
-
-const isSites = () => {
-    let path = page.value.relativePath
-
-
-    if (path == 'pages/sites.md') {
-        return true
-    } else {
-        return false
-    }
-
-}
-
-
-onMounted(() => {
-
-    boke.closePerson()
-
-    boke.openOutlineInterior()
-
-    if (isAbout()) {
-        boke.openOutline()
-        boke.closeDirectory()
-    }
-    // 当 页面是网站页面时 
-    if (isSites()) {
-        boke.closeOutline()
-        boke.closeDirectory()
-    }
-
-
-})
-
-// onUpdated(() => {
-//     // boke.isShowOutlineInterior = true
-
-//     if (page.value.headers.length == 0) {
-//         boke.isShowOutlineInterior = false
-//     } else {
-//         boke.isShowOutlineInterior = true
-//     }
-
-// })
-
-
-
-
-
-
-
 
 
 const toHeader = (mo) => {

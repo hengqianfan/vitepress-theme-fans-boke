@@ -11,6 +11,8 @@
 
             <PageNotes v-if="frontmatter.layout === 'xNotes'" />
 
+            <PageLife v-if="frontmatter.layout === 'xLife'" />
+
             <MainDoc v-else />
 
 
@@ -29,7 +31,7 @@ import MainAside from '../MainAside/index.vue'
 import PageHome from '../page-home/index.vue'
 import PageSites from '../page-sites/index.vue'
 import PageNotes from '../PageNotes/index.vue'
-
+import PageLife from '../PageLife/index.vue'
 
 import MainDoc from '../MainDoc/index.vue'
 
@@ -49,7 +51,6 @@ const { page, frontmatter } = useData()
     flex-direction: row;
     margin: 0px 5%;
 
-
     width: 90%;
 
     z-index: 20;
@@ -61,10 +62,7 @@ const { page, frontmatter } = useData()
 
 
 
-
-
     // background-color: red;
-
 
 
 
@@ -73,10 +71,8 @@ const { page, frontmatter } = useData()
         margin: 30px 0 0 320px;
         // padding-top: 10px;
 
-
-
         width: 80%;
-        min-height: 60vh;
+        min-height: 50vh;
 
 
 

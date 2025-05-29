@@ -7,15 +7,9 @@
 
 <script setup>
 
-// const typeWriter = (text, element, speed = 100) => {
-//     let i = 0;
-//     element.innerHTML = ''; // 清空容器
-//     const timer = setInterval(() => element.innerHTML += text[i++] + (i === text.length ? '' : ''), speed);
-//     return () => clearInterval(timer); // 返回清除函数
-// };
 
-// const target = document.querySelector('#banner-text');
-// const stop = typeWriter('这是一句逐字显示的文字', target, 80);
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -23,12 +17,23 @@
 
 .Banner-all {
     // background-color: rebeccapurple;
-    height: 50vh;
+    height: 55vh;
     width: 100%;
+    // background-image: url('/cover/wallhaven25052701.png');
+    // background-image: url('/cover/wallhaven25052702.png');
+    // background-image: url('/cover/wallhaven25052703.png');
+    // background-image: url('/cover/wallhaven25052704.png');
+
+
+    // background-image: url('/cover/pexels25052001.png');
+
     background-image: url('/cover/pexels25052002.png');
+
     // 宽度拉满，高度自动
     background-size: 100% auto;
+    // background-size: cover;
     background-repeat: no-repeat;
+    // background-position: center;
 
 
     display: flex;

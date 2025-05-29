@@ -50,7 +50,6 @@ const isOpen = () => {
     }
 
 
-
 }
 
 const boke = useBokeStore()
@@ -92,12 +91,23 @@ const isSites = () => {
 
 }
 
+const isNotes = () => {
+    let path = page.value.relativePath
+
+    if (path == 'pages/notes.md') {
+        return true
+    } else {
+        return false
+    }
+
+}
+
 
 
 onMounted(() => {
-    boke.closePerson()
-    boke.openOutline()
 
+    boke.openOutline()
+    // boke.openPerson()
 
     if (isHome()) {
 
@@ -115,7 +125,7 @@ onMounted(() => {
 
 
 onUpdated(() => {
-    boke.closePerson()
+
     boke.openOutline()
 
     if (isHome()) {
@@ -126,10 +136,13 @@ onUpdated(() => {
         boke.openPerson()
         boke.openOutline()
 
-
     } else if (isSites()) {
         boke.closeOutline()
         boke.openPerson()
+    } else if (isNotes()) {
+        boke.closeOutline()
+        boke.openPerson()
+
     }
 
     // if (page.value.headers.length == 0) {
@@ -158,7 +171,8 @@ a {
     background-color: transparent;
 
     .vp-doc-content {
-        padding: 10px;
+        padding: 15px;
+        // padding-bottom: 500px;
     }
 
     .outline {

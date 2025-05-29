@@ -3,13 +3,15 @@
 
         <div class="articlesCards">
 
-            <div class="articlesCard" v-for="item in posts.showedPosts" @click="clearNavItemIndex()">
+            <div class="articlesCard" v-for="item in posts.showedPosts">
                 <div class="articlesCard-cover">
                     <img :src="withBase(getImgSrc(item.frontmatter.cover))" alt="" class="articlesCard-cover-img">
+                    <div class="articlesCard-cover-pin" v-if="!item.frontmatter.pin == 0">置顶</div>
                 </div>
 
 
-                <a class="articlesCard-title" :href="withBase(item.url)" @click="boke.closeTags(), boke.openOutline()">
+                <a class="articlesCard-title" :href="withBase(item.url)"
+                    @click="boke.closeTags(), boke.openOutline(), clearNavItemIndex()">
                     {{ getPostName(item.url) }}
                 </a>
 
@@ -62,7 +64,6 @@ onMounted(() => {
     boke.closeOutline()
     boke.openPerson()
     boke.openTags()
-    boke.openClock()
 
 })
 const boke = useBokeStore()
@@ -78,7 +79,8 @@ const getImgSrc = (mo) => {
 // 防止从主页进入文章页后，导航栏的主页按钮依旧保持选中的状态
 const clearNavItemIndex = () => {
     boke.nowActiveNavItem = 100
-    boke.closePerson()
+
+    // boke.closePerson()
 }
 </script>
 
@@ -114,6 +116,7 @@ const clearNavItemIndex = () => {
                 border-radius: 15px 15px 0 0;
                 overflow: hidden;
                 transition: all 0.6s;
+                position: relative;
 
 
                 .articlesCard-cover-img {
@@ -124,11 +127,38 @@ const clearNavItemIndex = () => {
 
                 }
 
+                .articlesCard-cover-pin {
+                    position: absolute;
+                    // background-color: #d16f6f;
+                    width: 60px;
+                    height: 30px;
+                    top: 10px;
+                    left: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 15px;
+                    // font-family: '楷体';
+                    font-weight: 600;
+                    color: white;
+                    opacity: 0.7;
+
+                    background: rgba(255, 255, 255, 0.15);
+                    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(8px);
+                    -webkit-backdrop-filter: blur(8px);
+                    border: 1px solid rgba(255, 255, 255, 0.18);
+                    transition: transform 0.3s ease;
+
+
+                }
+
             }
 
 
 
             .articlesCard-title {
+                border-top: 1px solid #f1eef5;
                 width: 100%;
                 height: 50px;
                 line-height: 50px;

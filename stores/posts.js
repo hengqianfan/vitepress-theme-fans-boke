@@ -1,6 +1,9 @@
 import { defineStore } from 'pinia'
 import { data as posts } from '../data/post.data'
+import { data as life } from '../data/life.data'
+
 import { ref } from 'vue'
+
 
 
 // 从数据中提取所有的 tag 放入 tag 数组中
@@ -71,8 +74,6 @@ getALLTags(posts)
 const tags_arr = Object.entries(tags.value);
 
 
-
-
 const sortedPosts = ref([])
 
 const showedPosts = ref([])
@@ -97,14 +98,12 @@ const sort = (tag) => {
 
     showedPosts.value = res
 
-    // showData.value = res.slice(0, pageSize.value)
 }
 // 初始化数据
 sort('全部文章')
 
 
 // 分页函数
-
 const paginate = (data, page, pageSize) => {
 
     let start = (page - 1) * pageSize;
@@ -131,6 +130,13 @@ const getPagesTotal = (data, pageSize) => {
 // 初始化分页数据
 pagesTotal.value = getPagesTotal(posts, pageSize.value)
 showedPosts.value = paginate(sortedPosts.value, 1, pageSize.value)
+
+
+
+
+
+
+
 
 export const usePostsStore = defineStore('posts', {
     state: () => ({

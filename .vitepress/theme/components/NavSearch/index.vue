@@ -79,28 +79,30 @@ const toSearch = () => {
 
 .mas-all {
     margin: 0px 100px;
-    // margin-left: 20px;
+
     width: 160px;
     padding: 10px;
-    // background-color: white;
-    box-shadow: 2px 2px 8px #dedede inset,
-        -2px -2px 8px #ffffff inset;
+
+    box-shadow: 1px 1px 2px #dedede inset,
+        -1px -1px 2px #ffffff inset;
     border-radius: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
+
     .mas-engine {
         width: 20px;
         height: 20px;
         border-radius: 10px;
+
         background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        box-shadow: 1px 1px 3px #dedede,
-            -1px -1px 3px #f5f0f0;
+        box-shadow: 1px 1px 2px #dedede,
+            -1px -1px 2px #f5f0f0;
     }
 
     .mas-keyword {

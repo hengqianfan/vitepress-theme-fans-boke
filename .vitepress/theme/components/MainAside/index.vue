@@ -13,21 +13,14 @@
                 <MainAsidePerson />
             </div>
 
-            <!-- 
-            <div v-if="boke.isShowClock">
-                <Clock />
-            </div> -->
-
-
-
-
-
-
-
-
-            <!-- <MainAsideSearch /> -->
 
             <MainAsideTags />
+
+            <div>
+                <MainAsideInfo />
+
+            </div>
+
 
 
 
@@ -40,9 +33,10 @@
 
 <script setup>
 import MainAsidePerson from '../MainAsidePerson/index.vue'
-import MainAsideSearch from '../MainAsideSearch/index.vue'
 import MainAsideTags from '../MainAsideTags/index.vue'
 import MainAsideDirectory from '../MainAsideDirectory/index.vue'
+import MainAsideInfo from '../MainAsideInfo/index.vue'
+
 import { useBokeStore } from '../../../../stores/boke'
 const boke = useBokeStore()
 
@@ -59,6 +53,8 @@ import Clock from '../Clock/index.vue'
     flex-direction: column;
 
     position: absolute;
+
+    // background-color: rebeccapurple;
 
 
     .ma-container,

@@ -919,6 +919,13 @@ export const sites_data = [
                         icon: 'pexels',
                         intro: '免费的图片资源网站'
                     },
+                    {
+                        value: 'wallhaven',
+                        link: 'https://wallhaven.cc/',
+                        icon: 'img',
+                        intro: '免费的图片资源网站'
+                    },
+
 
                     {
                         value: '元气壁纸',

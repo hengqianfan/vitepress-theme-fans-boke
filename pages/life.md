@@ -1,5 +1,3 @@
-
-::: danger
-正在构建中
-
-::: 
+---
+layout: xLife
+---

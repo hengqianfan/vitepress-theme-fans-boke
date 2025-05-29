@@ -16,6 +16,10 @@
                         ">{{ item.name }}
                 </div>
             </div>
+
+            <div class="xNav-theme">
+                <i class="iconfont icon-theme"></i>
+            </div>
         </div>
     </div>
 </template>
@@ -98,7 +102,7 @@ const changeNavItem = (mo, no) => {
         flex-direction: row;
         align-items: center;
         height: 60px;
-        margin-left: 15%;
+        margin-left: 10%;
 
 
         .xNav-logo {
@@ -125,7 +129,7 @@ const changeNavItem = (mo, no) => {
         flex-direction: row;
         align-items: center;
 
-        margin-right: 15%;
+        margin-right: 5%;
 
         .xNav-menu {
             display: flex;
@@ -156,6 +160,21 @@ const changeNavItem = (mo, no) => {
                 color: #6868b4;
 
             }
+        }
+
+        .xNav-theme {
+            margin: 0 20px;
+            height: 30px;
+            width: 30px;
+            border-radius: 15px;
+            line-height: 35px;
+            background-color: white;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 1px 1px 2px #dedede,
+                -1px -1px 2px #ffffff;
         }
     }
 

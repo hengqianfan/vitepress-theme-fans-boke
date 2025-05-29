@@ -77,6 +77,8 @@ const { theme, page } = useData()
 
 .pn-all {
     padding-bottom: 100px;
+    height: 90vh;
+    overflow-y: scroll;
 
     .pn-notes-card {
         .pn-notes-card-title {

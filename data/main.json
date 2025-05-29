@@ -191,12 +191,9 @@
             "link": "/pages/notes"
         },
         {
-            "name": "生活",
-            "link": "/pages/life"
-        },
-        {
             "name": "关于",
             "link": "/pages/about"
         }
-    ]
+    ],
+    "IPC": "黔ICP备-2023015500号-3"
 }
