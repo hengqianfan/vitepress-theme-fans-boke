@@ -143,6 +143,8 @@ onUpdated(() => {
         boke.closeOutline()
         boke.openPerson()
 
+    } else {
+        boke.openOutlineInterior()
     }
 
     // if (page.value.headers.length == 0) {

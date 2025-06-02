@@ -3,13 +3,14 @@ tags: ['报错','vitepress','vue']
 icon: 'vitepress'
 aside: left
 cover: '/cover/24082801.png'
+pin: 3
 ---
 
 ###### ID: 24082801 
 
 <!-- ## 报错 -->
 
-## 异常 | 不生成链接
+## 1. 不生成链接
 
 - markdown 文件中使用链接语法无法正常生成链接
 
@@ -27,9 +28,12 @@ cover: '/cover/24082801.png'
 [VScode下载与使用](/zo-repo/vscode//00%20简述.md){target='_blank'}
 ```
 
-## 异常 | 自定义背景颜色后，文章侧边目录底部出现白边
+## 2. 自定义背景后，文章侧边目录底部出现白边
 
-<zo-img momo='/notesPic/202408200203.png' ></zo-img >
+
+![](/image/202408200203.png)
+
+
 
 
 `解决`：样式冲突，需要单独适配这个区域的css

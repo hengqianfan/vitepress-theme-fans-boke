@@ -10,7 +10,7 @@ export const useBokeStore = defineStore('boke', {
             isShowTags: false,
             isShowDocAfter: true,
             isShowOutline: false,
-            isShowOutlineInterior: true,
+            isShowOutlineInterior: false,
             isShowPerson: true,
             isShowDirectory: false,
             isShowClock: false

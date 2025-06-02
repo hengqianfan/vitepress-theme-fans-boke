@@ -47,6 +47,8 @@ const changeNavItem = (mo, no) => {
     if (mo == 0) {
         // 当在切换到首页时,开启标签
         boke.openTags()
+        // 关闭大纲
+        boke.closeOutline()
     } else {
         // 当在其他页面时，关闭文章标签
         boke.closeTags()

@@ -141,9 +141,10 @@ const clearNavItemIndex = () => {
                     // font-family: '楷体';
                     font-weight: 600;
                     color: white;
+                    // color: #b17171;
                     opacity: 0.7;
 
-                    background: rgba(255, 255, 255, 0.15);
+                    background: rgba(150, 150, 150, 0.4);
                     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
                     backdrop-filter: blur(8px);
                     -webkit-backdrop-filter: blur(8px);
