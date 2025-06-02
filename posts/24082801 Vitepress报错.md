@@ -3,7 +3,6 @@ tags: ['报错','vitepress','vue']
 icon: 'vitepress'
 aside: left
 cover: '/cover/24082801.png'
-pin: 3
 ---
 
 ###### ID: 24082801 
