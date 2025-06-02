@@ -47,7 +47,7 @@ import bokeMain from '../../data/main.json'
 
 
     width: 100%;
-    min-height: 20vh;
+    min-height: 180vh;
 
     display: flex;
     flex-direction: column;
