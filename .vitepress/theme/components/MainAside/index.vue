@@ -4,13 +4,15 @@
         <div class="ma-container">
 
 
-            <div v-if="boke.isShowDirectory">
-                <MainAsideDirectory />
 
-            </div>
 
             <div v-if="boke.isShowPerson">
                 <MainAsidePerson />
+            </div>
+
+            <div v-if="boke.isShowDirectory">
+                <MainAsideDirectory />
+
             </div>
 
 

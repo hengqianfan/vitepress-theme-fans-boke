@@ -191,6 +191,10 @@
             "link": "/pages/notes"
         },
         {
+            "name": "博客",
+            "link": "https://hengqianfan.github.io/vitepress-theme-fans-boke-mini-demo/"
+        },
+        {
             "name": "关于",
             "link": "/pages/about"
         }

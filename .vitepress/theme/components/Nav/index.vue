@@ -39,30 +39,39 @@ const router = useRouter()
 
 // mo 索引 no 路径
 const changeNavItem = (mo, no) => {
-
     // 改变索引值
     boke.changeActiveIndex(mo)
 
-    // 切换页面时，标签栏的出现逻辑
-    if (mo == 0) {
-        // 当在切换到首页时,开启标签
-        boke.openTags()
-        // 关闭大纲
-        boke.closeOutline()
+    if (no.includes('https://')) {
+        window.open(no)
+    } else if (no.includes('http://')) {
+        window.open(no)
     } else {
-        // 当在其他页面时，关闭文章标签
-        boke.closeTags()
+        // 切换页面时，标签栏的出现逻辑
+        if (mo == 0) {
+            // 当在切换到首页时,开启标签
+            boke.openTags()
+            // 关闭大纲
+            boke.closeOutline()
+        } else {
+            // 当在其他页面时，关闭文章标签
+            boke.closeTags()
 
+        }
+
+        // 随后，进入对应的页面
+        if (xdata.base == '/') {
+            // 默认base时
+            router.go(no)
+
+        }
+        // 加上base,并除去多余的/
+        router.go(`${xdata.base}${no.slice(1)}`)
     }
 
-    // 随后，进入对应的页面
-    if (xdata.base == '/') {
-        // 默认base时
-        router.go(no)
 
-    }
-    // 加上base,并除去多余的/
-    router.go(`${xdata.base}${no.slice(1)}`)
+
+
 }
 
 

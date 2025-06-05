@@ -762,6 +762,13 @@ export const sites_data = [
                         icon: 'claude',
                         intro: '由Anthropic开发的AI模型'
                     },
+
+                    {
+                        value: 'Grok',
+                        link: 'https://x.ai/grok',
+                        icon: 'grok',
+                        intro: '马斯克旗下的AI模型'
+                    },
                     {
                         value: '通义',
                         link: 'https://tongyi.aliyun.com/',
