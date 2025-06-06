@@ -4,7 +4,8 @@ tags: ['修改中','pinia']
 icon: 'vitepress'
 open: true
 id: 25031901
-cover: 'vitepresscover'
+cover: '/cover/vitepresscover.png' 
+
 
 ---
  

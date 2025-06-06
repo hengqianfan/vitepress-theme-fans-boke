@@ -112,7 +112,7 @@ const clearNavItemIndex = () => {
 
             .articlesCard-cover {
                 width: 100%;
-                height: 200px;
+                height: 180px;
                 border-radius: 15px 15px 0 0;
                 overflow: hidden;
                 transition: all 0.6s;

@@ -4,7 +4,7 @@ tags: ['修改中','Navidrome','音乐']
 icon: 'navidrome'
 open: false
 id: 25031903
-cover: 'vitepresscover'
+cover: '/cover/navidrome.png' 
 --- 
  
 ######  {{ $frontmatter.id? $frontmatter.id : $frontmatter.zoid }}
@@ -130,4 +130,11 @@ touch /etc/docker/daemon.json
 
 ```shell
 sudo systemctl restart docker
+```
+
+
+### 3.2 拉取镜像
+
+```shell
+sudo docker pull deluan/navidrome:latest
 ```
