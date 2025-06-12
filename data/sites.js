@@ -7,6 +7,14 @@ export const sites_data = [
             {
                 value: '最近常用',
                 children: [
+
+                    {
+                        value: 'Navidrome',
+                        link: 'http://127.0.0.1:4533/',
+                        icon: 'navidrome',
+                        intro: '电脑本地搭建的音乐网站',
+
+                    },
                     {
                         value: 'bilibili',
                         link: 'https://www.bilibili.com/',
@@ -233,6 +241,18 @@ export const sites_data = [
                     //     icon: 'proxy',
                     //     intro: '还可以，蛮稳定'
                     // },
+
+                ]
+            },
+            {
+                value: '运维工具',
+                children: [
+                    {
+                        value: '1panel',
+                        link: 'https://1panel.cn/',
+                        icon: '1panel',
+                        intro: '服务器面板'
+                    },
 
                 ]
             },
@@ -977,7 +997,14 @@ export const sites_data = [
                         link: 'https://tool.liumingye.cn/music/#/',
                         icon: 'music',
                         intro: '在线音乐播放（已停运）'
-                    }
+                    },
+                    {
+                        value: '熊猫无损',
+                        link: 'https://www.xmwav.com/',
+                        icon: 'music',
+                        intro: 'NB！无损音乐下载'
+                    },
+
                 ]
             },
             {
@@ -1060,12 +1087,13 @@ export const sites_data = [
                         intro: '漫画资源'
                     },
                     {
-                        value: '嗷呜动漫',
-                        link: 'https://www.moedm.net/',
-                        icon: 'video',
+                        value: '西瓜卡通',
+                        link: 'https://www.xgcartoon.com/',
+                        icon: 'dongman',
                         intro: '动漫资源网站'
-
                     },
+
+
                     {
                         value: 'AGE',
                         link: 'https://www.agedm.org/',
@@ -1078,6 +1106,13 @@ export const sites_data = [
                         link: 'https://github.com/agefanscom/website',
                         icon: 'dongman',
                         intro: 'AGE 地址更新'
+                    },
+                    {
+                        value: '嗷呜动漫',
+                        link: 'https://www.moedm.net/',
+                        icon: 'video',
+                        intro: '(已关闭)动漫资源网站'
+
                     }
                 ]
             },

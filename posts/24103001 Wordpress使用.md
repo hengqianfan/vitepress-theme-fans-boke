@@ -4,6 +4,7 @@ tags: ['wordpress','web']
 icon: 'wordpress'
 open: false
 cover: '/cover/wordpress.png'
+mothbal: true
 ---
  
 ###### 24103001

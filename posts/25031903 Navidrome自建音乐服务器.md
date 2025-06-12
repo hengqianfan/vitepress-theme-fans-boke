@@ -4,7 +4,8 @@ tags: ['修改中','Navidrome','音乐']
 icon: 'navidrome'
 open: false
 id: 25031903
-cover: '/cover/navidrome.png' 
+cover: '/cover/navidrome.png'
+
 --- 
  
 ######  {{ $frontmatter.id? $frontmatter.id : $frontmatter.zoid }}
@@ -15,22 +16,30 @@ cover: '/cover/navidrome.png'
 
 官网： https://www.navidrome.org/
 
-## 1. 安装 docker 环境
+## 1. 终端搭建
 
-### 1.1 卸载旧版本 Docker（如果存在）
+::: danger <Badge type='danger'>注意</Badge>
+
+因为网络问题，始终无法拉取镜像，所以此方法未完善,请看 `1panel` 搭建！ 
+
+:::
+
+### 1.1 安装 docker 环境
+
+#### 1.1.1 卸载旧版本 Docker（如果存在）
 
 ```shell
 sudo yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
 ```
 
-### 1.2 安装依赖
+#### 1.1.2 安装依赖
 
 ```shell
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 
 
-### 1.3 添加 Docker 官方仓库
+#### 1.1.3 添加 Docker 官方仓库
 
 ```shell
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -48,7 +57,7 @@ sudo yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/cen
 sudo yum makecache fast
 ```
 
-### 1.4 安装 Docker
+#### 1.1.4 安装 Docker
 
 ```shell
 sudo yum install -y docker-ce docker-ce-cli containerd.io
@@ -60,7 +69,7 @@ sudo yum install -y docker-ce docker-ce-cli containerd.io
 docker -v
 ```
 
-### 1.5 启动 Docker 并设置开机自启
+#### 1.1.5 启动 Docker 并设置开机自启
 
 ```shell
 sudo systemctl start docker
@@ -71,7 +80,7 @@ sudo systemctl enable docker
 ```
 
 
-### 1.6 验证安装
+#### 1.1.6 验证安装
 
 ```shell
 sudo docker --version
@@ -83,9 +92,9 @@ sudo docker --version
 docker -v
 ```
 
-## 2. 准备文件存放位置
+### 1.2. 准备文件存放位置
 
-###  2.1 创建音乐存储目录
+####  1.2.1 创建音乐存储目录
 
 - 存放你的音乐文件
 
@@ -93,7 +102,7 @@ docker -v
 sudo mkdir -p /var/music
 ```
 
-###  2.2 创建 Navidrome 数据目录
+####  1.2.2 创建 Navidrome 数据目录
 
 - 存放数据库和配置
 
@@ -106,9 +115,9 @@ sudo mkdir -p /opt/navidrome/data
 
 ```
 
-## 3 安装镜像
+### 1.3 安装镜像
 
-### 3.1 配置镜像加速源
+#### 1.3.1 配置镜像加速源
 
 ```shell
 touch /etc/docker/daemon.json
@@ -133,8 +142,80 @@ sudo systemctl restart docker
 ```
 
 
-### 3.2 拉取镜像
+#### 1.3.2 拉取镜像
 
 ```shell
 sudo docker pull deluan/navidrome:latest
 ```
+
+
+## 2. 1panel 搭建
+
+
+### 2.1. 安装 1Panel
+
+
+直接在实例中找到插件安装
+
+### 2.2 登录面板
+
+在命令行中输入执行获取基本信息
+
+```shell
+1pctl user-info
+```
+
+你会得到类似的信息
+
+```shell
+[root@iZ7x ~]# 1pctl user-info
+面板地址: http://$LOCAL_IP:3550/14d7486
+面板用户:  4a9943
+面板密码:  57ec4a
+```
+
+把`$LOCAL_IP`替换为你的公网IP，例如：`http://4.442.34:3550/14d7486`  
+
+
+在安全组中放行端口 `3550`
+
+
+###  2.3. 设置镜像加速
+
+
+```
+
+```
+
+
+
+下载音乐  
+
+https://www.xmwav.com/  
+
+
+https://wusunk.com/
+
+下载歌词
+
+https://www.kugeci.com/
+
+https://lyrics.net.cn/
+
+修改音乐
+
+https://www.mp3tag.de/
+
+制作歌词文件
+
+https://lrc.moyutime.cn/
+
+
+专辑封面
+
+http://coverbox.henry-hu.com/
+
+
+## 3. 本地安装
+
+https://www.navidrome.org/docs/installation/windows/#msi-install

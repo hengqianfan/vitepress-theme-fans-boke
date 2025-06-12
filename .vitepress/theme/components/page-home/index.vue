@@ -189,17 +189,17 @@ const clearNavItemIndex = () => {
                 background-color: white;
 
                 .articlesCard-time {
-                    margin-left: 10px;
+                    margin-left: 8px;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    padding: 5px;
+                    padding: 4px;
                     height: 20px;
                     color: #828e98;
                     // background-color: #afbdc8;
                     font-size: 10px;
                     border-radius: 5px;
-                    margin-right: 20px;
+
 
                 }
 

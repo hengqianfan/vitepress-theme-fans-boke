@@ -24,16 +24,16 @@
 
                     <div class="" v-if="it2.items">
 
-                        &nbsp &nbsp {{ it2.text }}
+                        &nbsp {{ it2.text }}
 
 
 
-                        <div class="" v-for="it3 in it2.items">&nbsp &nbsp &nbsp &nbsp {{ it3.text }}</div>
+                        <div class="" v-for="it3 in it2.items">&nbsp &nbsp {{ it3.text }}</div>
                     </div>
 
 
                     <div class="" v-else>
-                        <a :href="withBase(toPage(it2.link))"> &nbsp &nbsp {{ it2.text }}</a>
+                        <a :href="withBase(toPage(it2.link))"> &nbsp {{ it2.text }}</a>
                     </div>
 
 
@@ -134,7 +134,7 @@ const changeCollapsed = (mo) => {
 <style lang="scss" scoped>
 .mad-all {
 
-    width: 260px;
+    width: 280px;
     height: 800px;
     padding: 30px;
     background-color: white;

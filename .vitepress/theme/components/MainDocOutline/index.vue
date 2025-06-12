@@ -26,12 +26,12 @@
 
 
                 <div class="outline-three" v-for="item3 in item.children">
-                    <a :href="withBase(toHeader(item3.title))"> &nbsp
-                        &nbsp{{ item3.title }}</a>
+                    <a :href="withBase(toHeader(item3.title))">
+                        &nbsp &nbsp{{ item3.title }}</a>
 
                     <div class="outline-four" v-for="item4 in item3.children">
                         <a :href="withBase(toHeader(item4.title))">
-                            &nbsp &nbsp &nbsp &nbsp{{ item4.title }}</a>
+                            &nbsp &nbsp &nbsp {{ item4.title }}</a>
 
                     </div>
                 </div>
@@ -102,18 +102,14 @@ const toHeader = (mo) => {
 
     right: 10%;
 
-
-
     .mdo-button {
 
         font-family: '优设标题黑';
         color: #797474;
 
-
         width: 30px;
         padding: 5px 10px;
         height: 30px;
-
 
         position: absolute;
 
@@ -121,12 +117,9 @@ const toHeader = (mo) => {
 
         top: 10px;
 
-
-
         display: flex;
         justify-content: center;
         align-items: center;
-
 
         transition: all 0.7s;
     }
@@ -136,10 +129,10 @@ const toHeader = (mo) => {
         background-color: white;
         border-radius: 20px;
         padding: 20px;
-        width: 320px;
+        min-width: 340px;
         height: auto;
 
-        font-size: 14px;
+
         box-shadow: 1px 1px 2px #dedede,
             -1px -1px 2px #ffffff;
         transition: all 0.7s;
@@ -147,6 +140,8 @@ const toHeader = (mo) => {
         a {
             color: #797474;
             font-family: '优设标题黑';
+            font-size: 13px;
+            line-height: 13px;
             transition: all 0.7s;
             text-decoration: none;
         }
