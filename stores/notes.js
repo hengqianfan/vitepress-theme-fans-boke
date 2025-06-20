@@ -3,11 +3,7 @@ import notesList from '../data/notesList.json'
 import allDirectory from '../data/directory.json'
 import { ref } from 'vue'
 
-
-
-
-
-
+// 
 const getAllNotesKinds = () => {
     let res = notesList.map(it => it.kind)
     res = [...new Set(res)]
@@ -54,8 +50,8 @@ export const useNotesStore = defineStore('notes', {
     state: () => ({
         AllNotesKinds: getAllNotesKinds(),
         NowDirectoryName: isDirectory([]),
+        // 现在的文件目录
         NowDirectory: [],
-        // DirectoryGroup: [],
 
 
     }),
@@ -71,9 +67,6 @@ export const useNotesStore = defineStore('notes', {
             }
             this.NowDirectoryName = isDirectory(mo)
             this.NowDirectory = setDirectory(mo)
-
-
-
 
         }
     }

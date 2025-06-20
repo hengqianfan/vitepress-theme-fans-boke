@@ -1,14 +1,15 @@
 <template>
     <div class="Banner-all" id="banner-text">
         <!-- 学无止境，人无完人 -->
+        <canvas id="fogCanvas"></canvas>
     </div>
+
+
+
 
 </template>
 
 <script setup>
-
-
-
 
 </script>
 
@@ -44,7 +45,6 @@
     color: white;
 
     font-family: '标小智龙珠体';
-
 
 }
 </style>

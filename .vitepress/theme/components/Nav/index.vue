@@ -39,23 +39,51 @@ const router = useRouter()
 
 // mo 索引 no 路径
 const changeNavItem = (mo, no) => {
-    // 改变索引值
-    boke.changeActiveIndex(mo)
 
+    // 当切换到外站时 
     if (no.includes('https://')) {
         window.open(no)
     } else if (no.includes('http://')) {
         window.open(no)
+        // 站内切换
     } else {
+
+        // 改变索引值
+        boke.changeActiveIndex(mo)
+        // 关闭目录
+        // ( 这是为了，当是从某个笔记页面离开时，关闭侧边目录 )
+        boke.closeDirectory()
+        // 开启个人组件
+        // （ 通过导航栏切换，无论那个页面都会显示个人组件 ）
+        boke.openPerson()
+
         // 切换页面时，标签栏的出现逻辑
         if (mo == 0) {
             // 当在切换到首页时,开启标签
             boke.openTags()
             // 关闭大纲
             boke.closeOutline()
+            // 开启个人组件
         } else {
             // 当在其他页面时，关闭文章标签
             boke.closeTags()
+        }
+        // 切换页面时，大纲组件的出现逻辑
+        // 默认不显示大纲
+        boke.closeOutline()
+        // 切换到关于页面时显示大纲
+
+        const isAboutPage = () => {
+            if (no.indexOf("about") == -1) {
+                return false
+            } else {
+                return true
+            }
+        }
+
+        if (isAboutPage()) {
+            boke.openOutline()
+
 
         }
 

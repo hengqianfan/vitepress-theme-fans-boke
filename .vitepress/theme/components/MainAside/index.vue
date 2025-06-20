@@ -25,7 +25,6 @@
 
 
 
-
         </div>
 
         <!-- <MainAsidePlayer />   -->
@@ -42,7 +41,6 @@ import MainAsideInfo from '../MainAsideInfo/index.vue'
 import { useBokeStore } from '../../../../stores/boke'
 const boke = useBokeStore()
 
-import Clock from '../Clock/index.vue'
 
 </script>
 

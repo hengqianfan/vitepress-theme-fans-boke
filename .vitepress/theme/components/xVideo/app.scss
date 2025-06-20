@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+    .xVideo-all {
+        // max-height: 500px;
+
+        .myvideo {
+            padding: 5px;
+            /* border: 2px dashed blue; */
+            display: flex;
+            justify-content: center;
+            /* flex-direction: column; */
+
+            .myiframe {
+                min-width: 75%;
+                min-height: 0px !important;
+                padding: 10px;
+                border-radius: 20px;
+                background-color: white;
+                box-shadow: 5px 5px 18px #dedede,
+                    -5px -5px 18px #ffffff;
+            }
+        }
+
+
+    }
+}

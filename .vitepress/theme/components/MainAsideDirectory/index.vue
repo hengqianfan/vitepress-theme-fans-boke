@@ -10,22 +10,13 @@
 
             <div class="" v-if="it.items">
 
-
-
-
                 {{ it.text }}
-
-
-
-
-
 
                 <div class="mad-title2" v-for="it2 in it.items">
 
                     <div class="" v-if="it2.items">
 
                         &nbsp {{ it2.text }}
-
 
 
                         <div class="" v-for="it3 in it2.items">&nbsp &nbsp {{ it3.text }}</div>
@@ -71,59 +62,48 @@ import { useData, withBase } from 'vitepress'
 import { ref, onMounted, onUpdated } from 'vue'
 import { useBokeStore } from '../../../../stores/boke'
 import { useNotesStore } from '../../../../stores/notes'
-import allDirectory from '../../../../data/directory.json'
+
 
 const boke = useBokeStore()
 const notes = useNotesStore()
 
 const { page } = useData()
 
-let nowDirectory = ref('')
 
-const updateDirectory = () => {
-    nowDirectory.value = page.value.relativePath
-}
 
-// 判断是否属于文章页面
-const isPage = () => {
-    // 获取页面路径
-    const path = page.value.relativePath
-    // 判断路径中是否含有 pages
-    const res = path.includes('pages/')
-    // 返回结果
-    return res
 
-}
+
+
+// const { page } = useData()
 
 onMounted(() => {
-    updateDirectory()
+    // 修复BUG：在刷新页面时，让目录数据不丢失！
+    // 之前实现逻辑是通过 笔记聚合页面跳转时 自动更新页面
+    // 但有时可能不通过 笔记聚合页面跳转 比如 载入后刷新和 从其他页面中的链接跳转时
 
-}
-)
+    //获取当前文章的路径，然后更新目录
+    notes.updateDirectory(page.value.relativePath || "")
+
+})
+
 
 // 组件更新时
 onUpdated(() => {
+
+    // notes.updateDirectory(page.value.relativePath || "")
+
     // 更新目录树（侧边栏）
-    updateDirectory()
+    // updateDirectory()
     // 如果跳转到 pages 页面 ，关闭目录树，因为只有 笔记 才有目录树
-    if (isPage()) {
-        boke.closeDirectory()
-    }
+
 
 
 })
 
 const toPage = (mo) => {
 
-
-
-
     return mo.split('.m')[0]
 
-}
-
-const changeCollapsed = (mo) => {
-    let res = mo
 }
 
 

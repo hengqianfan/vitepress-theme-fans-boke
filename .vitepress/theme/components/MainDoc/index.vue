@@ -102,23 +102,46 @@ const isNotes = () => {
 
 }
 
+// 判断是否属于笔记，即是在 notes 文件夹下
+const isInNotesFolder = () => {
+    let path = page.value.relativePath
+
+    // 返回索引值表示存在，返回-1表示不存在
+    let res = path.indexOf('notes/')
+
+    if (res == -1) {
+        return false
+    } else {
+        return true
+    }
+
+}
+
+
+
+
+
+
+
+
 
 
 onMounted(() => {
 
-    boke.openOutline()
-    // boke.openPerson()
+    boke.closeOutline()
 
     if (isHome()) {
-
-        boke.closeOutline()
         boke.openPerson()
-    } else if (isAbout()) {
-        boke.openOutline()
+    } else if (isNotes()) {
+        boke.closeOutline()
 
 
     } else if (isSites()) {
         boke.closeOutline()
+    } else if (isAbout()) {
+        boke.openOutline
+    } else {
+        boke.openOutline()
     }
 
 })
@@ -126,12 +149,14 @@ onMounted(() => {
 
 onUpdated(() => {
 
-    boke.openOutline()
+    boke.closeOutline()
 
+    // 主页
     if (isHome()) {
 
         boke.closeOutline()
         boke.openPerson()
+        // 关于
     } else if (isAbout()) {
         boke.openPerson()
         boke.openOutline()
@@ -142,10 +167,15 @@ onUpdated(() => {
     } else if (isNotes()) {
         boke.closeOutline()
         boke.openPerson()
-
     } else {
-        boke.openOutlineInterior()
+        boke.openOutline()
     }
+
+    if (isInNotesFolder()) {
+        boke.openDirectory()
+        boke.closePerson()
+    }
+
 
     // if (page.value.headers.length == 0) {
     //     isShow.value = false
