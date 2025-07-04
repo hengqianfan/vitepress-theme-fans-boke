@@ -44,10 +44,6 @@
             </div>
 
 
-
-
-
-
         </div>
 
 
@@ -67,14 +63,12 @@ import { useNotesStore } from '../../../../stores/notes'
 const boke = useBokeStore()
 const notes = useNotesStore()
 
+
 const { page } = useData()
 
 
 
 
-
-
-// const { page } = useData()
 
 onMounted(() => {
     // 修复BUG：在刷新页面时，让目录数据不丢失！
@@ -83,19 +77,20 @@ onMounted(() => {
 
     //获取当前文章的路径，然后更新目录
     notes.updateDirectory(page.value.relativePath || "")
-
+    // NowDirectory.value = notes.NowDirectory
+    // window.location.reload();
 })
 
 
-// 组件更新时
 onUpdated(() => {
+    // notes.updateDirectory(page.value.relativePath || "")
 
     // notes.updateDirectory(page.value.relativePath || "")
+    notes.updateDirectory(page.value.relativePath || "")
 
     // 更新目录树（侧边栏）
     // updateDirectory()
     // 如果跳转到 pages 页面 ，关闭目录树，因为只有 笔记 才有目录树
-
 
 
 })

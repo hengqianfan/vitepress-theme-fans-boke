@@ -39,6 +39,9 @@ import { useNotesStore } from '../../../../stores/notes';
 
 const notes = useNotesStore()
 
+
+
+
 const { frontmatter } = useData()
 
 const isOpen = () => {

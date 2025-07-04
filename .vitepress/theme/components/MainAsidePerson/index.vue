@@ -1,6 +1,6 @@
 <template>
     <div class="xPerson">
-        <img src="/icon/logo.png" class="xPerson-icon">
+        <img :src="withBase(xData.PersonPortrait)" class="xPerson-icon">
 
 
 
@@ -16,6 +16,7 @@
 </template>
 
 <script setup>
+import { withBase } from 'vitepress'
 import xData from '../../../../data/main.json'
 import clock from '../Clock/index.vue'
 

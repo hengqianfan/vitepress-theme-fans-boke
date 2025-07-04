@@ -3,10 +3,9 @@
     h1 {
         margin: 50px;
         line-height: 28px;
-        font-size: 36px;
+        font-size: 32px;
         font-weight: 400;
         font-family: '优设标题黑';
-
         color: black;
         text-align: center;
         min-width: 100px;
@@ -17,15 +16,16 @@
 
     h2 {
         margin: 15px;
-        margin-top: 60px;
+        margin-top: 100px;
         line-height: 28px;
-        font-size: 30px;
+        font-size: 28px;
         font-weight: 400;
         color: black;
 
         font-family: '优设标题黑';
-
         min-width: 100px;
+        // padding-bottom: 10px;
+        // border-bottom: 1px darkcyan dashed;
 
 
 
@@ -35,14 +35,11 @@
 
 
 
-    d {}
-
-
     h3 {
         margin: 15px;
         margin-top: 60px;
-        line-height: 28px;
-        font-size: 28px;
+        line-height: 24px;
+        font-size: 24px;
         font-weight: 400;
         color: black;
 
@@ -54,9 +51,9 @@
     }
 
     h4 {
-        font-size: 24px;
         margin: 10px;
-        line-height: 26px;
+        line-height: 20px;
+        font-size: 20px;
 
         font-weight: 400;
 
