@@ -1,100 +1,20 @@
-<template>
-    <div class="xSites-all">
-        <div class="xSites-nav">
-            <div class="xSites-nav-item" v-for="item in sites.sites" @click="sites.changeNowSiteKind(item.value)">
-                {{ item.value }}
-            </div>
-        </div>
-
-        <div class="xSites-content">
-
-            <div class="sites-card" v-for="it in sites.showSites">
-                <div class="sites-card-title">{{ it.value }}</div>
-                <div class="sites">
-                    <div class="site" v-for="it2 in it.children">
-                        <div class="site-info">
-                            <img :src="withBase(getIconUrl(it2.icon))" alt="" class="site-icon">
-
-                            <a :href="it2.link" target="_blank" rel="noopener noreferrer" class="site-title"> {{
-                                it2.value }}</a>
-                        </div>
-                        <div class="site-intro">{{ it2.intro }}</div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-        </div>
-    </div>
-</template>
-
-<script setup>
-import { withBase } from 'vitepress'
-import { useSitesStore } from '../../../../stores/sites'
-import { useBokeStore } from '../../../../stores/boke'
-import { getIconUrl } from '../../../tools/getURL'
-import { onMounted } from 'vue'
-
-const sites = useSitesStore()
-
-const boke = useBokeStore()
-
-
-onMounted(() => {
-    boke.closeDirectory()
-    boke.closeTags()
-    boke.closeOutline()
-    boke.openPerson()
-
-})
-
-</script>
-
-<style lang="scss" scoped>
-@use './app.scss';
-@use './dark.scss';
-
-.xSites-all {
-    background-color: transparent;
-    width: 95%;
-    height: 88vh;
-    margin: 0 auto;
-
+.dark .xSites-all {
 
     .xSites-nav {
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        background-color: #161515;
 
-        padding: 10px;
-        height: 60px;
-        background-color: #ffffff;
-        // background-color: aliceblue;
 
-        box-shadow: 2px 2px 4px #dedede,
-            -2px -2px 4px #f4f2f2;
-
+        box-shadow: 1px 1px 4px #dedede,
+            -1px -1px 4px #928f8f;
 
 
 
         .xSites-nav-item {
-            width: 100px;
-            height: 30px;
-            line-height: 30px;
-            margin-left: 15px;
-            background-color: white;
-            text-align: center;
-            border-radius: 5px;
-            box-shadow: 2px 2px 3px #dedede,
-                -2px -2px 3px #ffffff;
 
-            box-shadow: 2px 2px 3px #dedede,
-                -2px -2px 3px #f7f3f3;
-            font-family: '优设标题黑';
-
+            background-color: rgb(55, 10, 10);
+            box-shadow: 1px 1px 4px #dedede,
+                -1px -1px 4px #928f8f;
 
         }
 
@@ -109,17 +29,10 @@ onMounted(() => {
     }
 
     .xSites-content {
-        margin-top: 20px;
-        height: 80vh;
-        width: 100%;
-        background-color: #ffffff;
-        box-shadow: 5px 5px 18px #dedede,
-            -5px -5px 18px #ffffff;
-        display: flex;
 
-        flex-direction: column;
-        overflow-y: scroll;
-        padding: 30px;
+        background-color: #504e4e;
+        box-shadow: 1px 1px 4px #dedede,
+            -1px -1px 4px #928f8f;
 
         .sites-card {
             margin-top: 20px;
@@ -139,12 +52,7 @@ onMounted(() => {
                 margin-bottom: 20px;
                 text-align: center;
 
-                // background: linear-gradient(45deg, #ef9393, #7e7e21, #ffff00, #b74b4b, #72a472, #646493);
-                // background: linear-gradient(45deg, #1d7e76, #6eb0ca, #5464b3, #3a2d8a, #432768, #b0339d);
-                // -webkit-background-clip: text;
-                // background-clip: text;
-                // color: transparent;
-                // transition: background 0.5s;
+
 
             }
 
@@ -160,7 +68,7 @@ onMounted(() => {
                     margin: 10px;
                     width: 225px;
                     height: 100px;
-                    border: 2px white dotted;
+                    border: none;
 
                     border-radius: 5px;
                     display: flex;
@@ -168,9 +76,8 @@ onMounted(() => {
                     justify-content: flex-start;
                     padding: 10px 20px;
 
-
-                    box-shadow: 2px 2px 10px #dedede,
-                        -2px -2px 10px #f8f8f8;
+                    box-shadow: 1px 1px 4px #dedede,
+                        -1px -1px 4px #928f8f;
 
                     .site-info {
                         display: flex;
@@ -180,11 +87,10 @@ onMounted(() => {
 
                             width: 40px;
                             height: 40px;
-                            background-color: white;
+                            background-color: gainsboro;
                             border-radius: 5px;
                             padding: 2px;
-                            box-shadow: 2px 2px 3px #dedede,
-                                -2px -2px 3px #f7f3f3;
+                            box-shadow: none;
                         }
 
                         .site-title {
@@ -261,4 +167,3 @@ onMounted(() => {
 
     }
 }
-</style>

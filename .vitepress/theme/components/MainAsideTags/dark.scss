@@ -1,0 +1,67 @@
+.dark .mat-all {
+
+
+    background-color: #1e152e;
+
+    box-shadow: 2px 2px 8px #dedede,
+        -2px -2px 8px #ffffff;
+
+
+    .mat-name {
+        margin: 10px;
+        color: #c0bbbb;
+        font-size: 12px;
+    }
+
+    .mat-tags {
+
+
+        .mat-tag {
+            // 原样式
+            min-width: 50px;
+            height: 20px;
+            line-height: 26px;
+            text-align: center;
+            padding: 10px;
+            background-color: #ebeef07e;
+            margin: 5px 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            font-family: '优设标题黑';
+            border-radius: 8px;
+            color: #3071c7;
+            box-shadow: 1px 1px 2px #dedede,
+                -1px -1px 2px #ffffff;
+            position: relative;
+
+            background-color: #3071c7;
+            color: white;
+
+
+
+            .mat-tag-num {
+                color: yellow;
+
+            }
+
+            // color: rgb(72, 138, 109);
+        }
+
+        .mat-tag:hover {
+            background-color: #d5e0ee;
+            color: black;
+
+            .mat-tag-num {
+
+                color: red;
+
+            }
+        }
+    }
+
+
+
+
+}

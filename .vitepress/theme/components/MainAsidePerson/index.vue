@@ -27,6 +27,9 @@ const getSocialLinkIcon = (momo) => {
 
 <style lang="scss" scoped>
 @use './app.scss';
+@use './dark.scss';
+
+
 
 .xPerson {
 

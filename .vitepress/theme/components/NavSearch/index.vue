@@ -76,6 +76,7 @@ const toSearch = () => {
 
 <style lang="scss" scoped>
 @use './app.scss';
+@use './dark.scss';
 
 .mas-all {
     margin: 0px 100px;

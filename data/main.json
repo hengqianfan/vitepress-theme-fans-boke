@@ -118,6 +118,10 @@
         [
             "/notes/nginx",
             1
+        ],
+        [
+            "/notes/wordpress",
+            1
         ]
     ],
     "SearchKeyword": "站外搜索",

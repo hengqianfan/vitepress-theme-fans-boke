@@ -1,52 +1,9 @@
-<template>
-    <div class="ph-siteinfo">
-
-        <div class="ph-siteinfo-theme">
-            <img src="https://img.shields.io/badge/主题-4285F4" alt="">
-
-            <div class="ph-siteinfo-theme-name">
-                <a href="https://hengqianfan.github.io/vitepress-theme-fans-instructions/" target="_blank">Boke</a>
-            </div>
-        </div>
+.dark .ph-siteinfo {
 
 
-        <div class="ph-siteinfo-powered">
-            Powered |
-            <div class="">VitePress</div>
-        </div>
-
-
-        <div class="ph-siteinfo-icp">
-
-            {{ bokeMain.IPC }}
-        </div>
-
-
-    </div>
-</template>
-
-<script setup>
-import bokeMain from '../../../../data/main.json'
-</script>
-
-<style lang="scss" scoped>
-// @use './app.scss';
-@use './dark.scss';
-
-.ph-siteinfo {
-
-    margin: 20px auto;
-
-    padding-top: 20px !important;
-    min-height: 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     // 在网站底部留白
     // margin-bottom: 150px;
     border-top: 1px solid rgb(212, 203, 203);
-
-
 
 
     .ph-siteinfo-powered {
@@ -63,7 +20,7 @@ import bokeMain from '../../../../data/main.json'
 
         div:hover {
 
-            color: rgb(216, 213, 10) !important;
+            color: rgb(169, 168, 114) !important;
 
         }
 
@@ -105,10 +62,9 @@ import bokeMain from '../../../../data/main.json'
 
     .ph-siteinfo-icp:hover {
 
-        color: rgb(23, 22, 109);
+        color: rgb(186, 186, 205);
 
     }
 
 
 }
-</style>

@@ -1,0 +1,60 @@
+.dark .mas-all {
+
+
+    box-shadow: 1px 1px 2px #dedede inset,
+        -1px -1px 2px #ffffff inset;
+
+
+    .mas-engine {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+
+        background-color: black;
+
+
+        box-shadow: 1px 1px 2px #dedede,
+            -1px -1px 2px #f5f0f0;
+    }
+
+    .mas-keyword {
+
+        width: 80px;
+        background-color: #f1f0f0;
+        font-size: 14px;
+        padding: 0 10px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px #dedede inset,
+            -1px -1px 3px #f5f0f0 inset;
+        display: flex;
+        color: #4b668a;
+        // color: #b66920;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: all 1s;
+        font-family: '站酷高端黑';
+
+    }
+
+
+
+    .mas-engine-menu {
+
+        background-color: black;
+        z-index: 100;
+        border-radius: 10px;
+
+        box-shadow: 1px 1px 3px #dedede,
+            -1px -1px 3px #f5f0f0;
+
+
+        .mas-engine-menu-icon {
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+        }
+
+    }
+
+}

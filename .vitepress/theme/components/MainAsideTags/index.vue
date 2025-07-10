@@ -24,6 +24,9 @@ const boke = useBokeStore()
 </script>
 
 <style lang="scss" scoped>
+@use './app.scss';
+@use './dark.scss';
+
 .mat-all {
     margin: 10px;
     margin-top: 30px;

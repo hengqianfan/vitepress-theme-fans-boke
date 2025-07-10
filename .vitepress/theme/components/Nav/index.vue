@@ -18,19 +18,27 @@
             </div>
 
             <div class="xNav-theme">
-                <i class="iconfont icon-theme"></i>
+                <i class="iconfont icon-theme" @click="showThemeMenu = !showThemeMenu"></i>
+                <div class="theme-menu" v-if="showThemeMenu">
+                    <div class="option-content">
+                        <div class="option-name">主题切换</div>
+                        <div class="option-btn" @click="changeTheme(0); showThemeMenu = !showThemeMenu">白昼</div>
+                        <div class="option-btn" @click="changeTheme(1); showThemeMenu = !showThemeMenu">黑夜</div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 </template>
-
 <script setup>
 import { ref } from 'vue';
-import { useRouter } from 'vitepress'
+import { useRouter, useData } from 'vitepress'
 import xdata from '../../../../data/main.json'
 import { useBokeStore } from '../../../../stores/boke'
 import NavSearch from '../NavSearch/index.vue'
 
+const { isDark } = useData()
 
 
 const boke = useBokeStore()
@@ -97,7 +105,16 @@ const changeNavItem = (mo, no) => {
         router.go(`${xdata.base}${no.slice(1)}`)
     }
 
+}
 
+const showThemeMenu = ref(false)
+
+const changeTheme = (mo) => {
+    if (mo == 0) {
+        isDark.value = false
+    } else if (mo == 1) {
+        isDark.value = true
+    }
 
 }
 
@@ -106,6 +123,8 @@ const changeNavItem = (mo, no) => {
 
 <style lang="scss" scoped>
 @use './app.scss';
+@use './dark.scss';
+
 
 .xNav-all {
     height: 70px;
@@ -213,6 +232,53 @@ const changeNavItem = (mo, no) => {
             align-items: center;
             box-shadow: 1px 1px 2px #dedede,
                 -1px -1px 2px #ffffff;
+
+
+            .theme-menu {
+                margin-top: 150px;
+                padding: 10px;
+                position: absolute;
+                background-color: rgb(231, 227, 227);
+                box-shadow: 2px 2px 3px #dedede,
+                    -2px -2px 3px #ffffff;
+                z-index: 1001;
+                border-radius: 5px;
+
+                .option-content {
+                    // background-color: greenyellow;
+                    height: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+
+                    .option-name {
+                        height: 20px;
+                        font-size: 10px;
+                        line-height: 20px;
+                        padding: 0 5px;
+                        background-color: white;
+                        border-radius: 5px;
+                        color: rgb(142, 136, 136);
+                        box-shadow: 1px 1px 2px #dedede inset,
+                            -1px -1px 2px #ffffff inset;
+
+                    }
+
+                    .option-btn {
+                        margin-left: 10px;
+                        height: 20px;
+                        width: 40px;
+                        border-radius: 10px;
+                        background-color: #c1dfe6;
+                        font-size: 10px;
+                        line-height: 20px;
+                        text-align: center;
+
+                    }
+
+                }
+            }
         }
     }
 

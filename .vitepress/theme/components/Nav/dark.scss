@@ -1,0 +1,132 @@
+.dark .xNav-all {
+
+    background-color: #1b1b1f !important;
+
+    box-shadow: 2px 2px 5px #dedede,
+        -2px -2px 5px #ffffff;
+
+
+
+
+
+    .xNav-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 60px;
+        margin-left: 10%;
+
+
+        .xNav-logo {
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        .xNav-siteName {
+            margin-left: 15px;
+            height: 30px;
+            line-height: 30px;
+            font-family: 'ZQK英文';
+            font-size: 16px;
+
+
+        }
+
+
+    }
+
+    .xNav-right {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        margin-right: 5%;
+
+        .xNav-menu {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .xNav-menu-item {
+                margin: 0 20px;
+                height: 35px;
+                width: 70px;
+                line-height: 35px;
+                text-align: center;
+                background-color: transparent;
+                // border-radius: 10px;
+                font-weight: 600;
+                font-family: '剑豪体';
+
+
+            }
+
+            .xNav-menu-item:hover {
+
+                color: #6868b4;
+            }
+
+            .active {
+                border-bottom: 2px solid #6868b4 !important;
+                color: #6868b4;
+
+            }
+        }
+
+        .xNav-theme {
+            margin: 0 20px;
+            height: 30px;
+            width: 30px;
+            border-radius: 15px;
+            line-height: 35px;
+            background-color: black;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 1px 1px 2px #dedede,
+                -1px -1px 2px #ffffff;
+
+
+            .theme-menu {
+
+                padding: 10px;
+                position: absolute;
+                background-color: black;
+                box-shadow: 1px 1px 2px #dedede inset,
+                    -1px -1px 2px #ffffff inset;
+                border: 1px dashed dodgerblue;
+
+                .option-content {
+
+                    .option-name {
+                        height: 20px;
+                        font-size: 10px;
+                        line-height: 20px;
+                        padding: 0 5px;
+                        background-color: #1e152e;
+                        border-radius: 5px;
+                        color: white;
+                        box-shadow: none;
+
+                    }
+
+                    .option-btn {
+                        margin-left: 10px;
+                        height: 20px;
+                        width: 40px;
+                        border-radius: 10px;
+                        background-color: rgb(145, 110, 44);
+                        font-size: 10px;
+                        line-height: 20px;
+                        text-align: center;
+
+                    }
+
+                }
+            }
+        }
+    }
+
+}

@@ -15,6 +15,7 @@
 
 <style lang="scss" scoped>
 @use './app.scss';
+@use './dark.scss';
 
 .Banner-all {
     // background-color: rebeccapurple;

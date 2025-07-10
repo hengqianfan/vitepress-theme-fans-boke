@@ -1,0 +1,42 @@
+/* 粉色主题变量 */
+html.pink-theme {
+    /* 主色调 */
+    --vp-c-brand: #ff7eb9;
+    --vp-c-brand-light: #ffa7d0;
+    --vp-c-brand-lighter: #ffcce4;
+    --vp-c-brand-dark: #e0488f;
+    --vp-c-brand-darker: #c42a72;
+
+    /* 背景色 */
+    --vp-c-bg: #fff5f7;
+    --vp-c-bg-alt: #ffeef2;
+    --vp-c-bg-soft: #fce5eb;
+
+    /* 文字色 */
+    --vp-c-text: #4a1a2c;
+    --vp-c-text-light: #7a3454;
+
+    /* 特殊元素 */
+    --vp-custom-block-tip-border: #ffb6c1;
+    --vp-custom-block-tip-bg: rgba(255, 182, 193, 0.15);
+    --vp-button-brand-bg: var(--vp-c-brand);
+}
+
+/* 粉色主题深色模式 */
+html.pink-theme.dark {
+    --vp-c-bg: #1a0a12;
+    --vp-c-bg-alt: #240e18;
+    --vp-c-bg-soft: #2e121f;
+    --vp-c-text: #f9dbe7;
+    --vp-c-text-light: #e6b3c9;
+    --vp-custom-block-tip-bg: rgba(199, 78, 128, 0.2);
+}
+
+/* 粉色主题特有元素 */
+html.pink-theme .VPNavBar {
+    background: linear-gradient(120deg, #ffcce4, #ffb7d5);
+}
+
+html.pink-theme .vp-doc div[class*='language-'] {
+    border: 1px solid rgba(255, 126, 185, 0.3);
+}

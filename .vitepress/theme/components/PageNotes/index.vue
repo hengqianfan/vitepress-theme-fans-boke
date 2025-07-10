@@ -70,6 +70,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @use './app.scss';
+@use './dark.scss';
 
 .pn-all {
     padding-bottom: 100px;

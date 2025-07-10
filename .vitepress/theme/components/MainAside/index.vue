@@ -46,6 +46,8 @@ const boke = useBokeStore()
 
 <style lang="scss" scoped>
 @use './app.scss';
+// @use './dark.scss';
+
 
 .xSide {
     min-height: 80vh;

@@ -1,87 +1,36 @@
-:root {
-
+.dark {
     h1 {
-        margin: 50px;
-        line-height: 28px;
-        font-size: 32px;
-        font-weight: 400;
-        font-family: '优设标题黑';
-        color: black;
-        text-align: center;
-        min-width: 100px;
-        padding: 10px;
-
-
+        color: white;
     }
 
     h2 {
-        margin: 15px;
-        margin-top: 100px;
-        line-height: 28px;
-        font-size: 28px;
-        font-weight: 400;
-        color: black;
-
-        font-family: '优设标题黑';
-        min-width: 100px;
-        // padding-bottom: 10px;
-        // border-bottom: 1px darkcyan dashed;
-
-
-
-
-
+        color: white;
     }
 
 
 
     h3 {
-        margin: 15px;
-        margin-top: 60px;
-        line-height: 24px;
-        font-size: 24px;
-        font-weight: 400;
-        color: black;
-
-        font-family: '优设标题黑';
-        display: block;
-        min-width: 100px;
-
-        // text-decoration: 1px dashed blue;
+        color: white;
     }
 
     h4 {
-        margin: 10px;
-        line-height: 20px;
-        font-size: 20px;
-
-        font-weight: 400;
-
-        font-family: '优设标题黑';
+        color: white;
     }
 
     h5,
     h6 {
-        margin: 10px;
-        line-height: 24px;
-        font-size: 20px;
-        font-weight: 400;
-
-
-        font-family: '优设标题黑';
+        color: white;
     }
-
 
     p {
         margin-top: 5px;
         font-weight: 500;
     }
+
 }
 
-:root {
-    // --vp-custom-block-font-size: 14px;
-    // --vp-custom-block-code-font-size: 13px;
 
+.dark {
 
     .custom-block.info {
         //  这里只能改颜色
@@ -89,7 +38,7 @@
         //  所以自己重写一个覆盖
         border: 2px dashed gray;
         --vp-custom-block-info-text: var(--vp-c-text-1);
-        --vp-custom-block-info-bg: #f1efef;
+        --vp-custom-block-info-bg: #816f6f;
         --vp-custom-block-info-code-bg: var(--vp-c-default-soft);
     }
 
@@ -126,21 +75,15 @@
         // border: 2px dashed #7e7e40;
 
         border: 2px dashed #cf962b;
-        --vp-custom-block-warning-text: var(--vp-c-text-1);
-        // --vp-custom-block-warning-bg: #f7f3dd;
-        --vp-custom-block-warning-bg: #FFFFCC;
-        // --vp-custom-block-warning-bg: #e7ec81;
 
-        // --vp-custom-block-warning-code-bg: var(--vp-c-warning-soft);
-        // --vp-custom-block-warning-code-bg: #1e5aa8;
+        --vp-custom-block-warning-text: var(--vp-c-text-1);
+
+        --vp-custom-block-warning-bg: #FFFFCC;
+        --vp-custom-block-warning-bg: #cf962b;
 
 
     }
 
-    // .custom-block.warning a,
-    // .custom-block.warning code {
-
-    // }
 
 
 
@@ -154,7 +97,7 @@
         //  所以自己重写一个覆盖
         border: 2px dashed red;
         --vp-custom-block-danger-text: var(--vp-c-text-1);
-        --vp-custom-block-danger-bg: #fbe2e5;
+        --vp-custom-block-danger-bg: #aa515b;
         // --custom-color: #f7eff0;
 
         // background: linear-gradient(45deg, var(--custom-color) 25%, white 0, white 50%, var(--custom-color) 0, var(--custom-color) 75%, white 0, white 100%);
@@ -165,27 +108,7 @@
         transition: 1s ease;
     }
 
-    // .custom-block.danger:hover {
-    //     //  这里只能改颜色
-    //     --vp-custom-block-danger-border: red;
-    //     //  所以自己重写一个覆盖
-    //     // --vp-custom-block-danger-text: white;
-    //     --vp-custom-block-danger-bg: white;
 
-    //     // background: linear-gradient(45deg, #d6542d, #d4cc7e, #6d134a, #8b2469, #ddd39b, #8b0909);
-    //     // -webkit-background-clip: text;
-    //     // background-clip: text;
-    //     // color: transparent;
-    //     // transition: background 0.5s;
-    //     background: white;
-
-    //     transition: 1s ease;
-    // }
-
-    // .custom-block.danger:hover code {
-
-
-    // }
 
     .custom-block.danger:hover a {
         color: #e76d26;
@@ -244,22 +167,3 @@
     position: relative !important;
     // background-color: #191f18 !important;
 }
-
-
-
-
-
-
-// .vp-code span {
-//     color: var(--shiki-dark, inherit);
-//     background-color: #cf962b;
-// }
-
-// .dark .vp-code span {
-//     color: var(--shiki-dark, inherit);
-// }
-
-// html:not(.dark) .vp-code span {
-//     color: var(--shiki-light, inherit);
-//     // background-color: #2d1a76;
-// }

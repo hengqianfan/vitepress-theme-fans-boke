@@ -34,28 +34,21 @@ import bokeMain from '../../data/main.json'
 
 <style lang="scss">
 .layout-all {
-
     $lineColor: #f5f0f0;
     background-image: linear-gradient($lineColor 1px, transparent 1px),
-
         linear-gradient(to right, $lineColor 1px, transparent 1px);
-
     background-size: 100% 10px,
         10px 100%;
     background-position: 0 0;
 
-
-
     width: 100%;
     min-height: 180vh;
-
     display: flex;
     flex-direction: column;
-
     overflow: visible;
+}
 
-    // background-color: #1d4bad;
-
-
+.dark .layout-all {
+    background: none;
 }
 </style>

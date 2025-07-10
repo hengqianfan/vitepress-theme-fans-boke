@@ -63,6 +63,13 @@
         "cover": "/cover/computercover.png"
     },
     {
+        "name": "WordPress",
+        "link": "/notes/wordpress/00 简述",
+        "kind": "网站",
+        "icon": "/icon/web.png",
+        "cover": "/cover/wordpress.png"
+    },
+    {
         "name": "建站相关笔记",
         "link": "/notes/build-site/00 简述",
         "kind": "网站",

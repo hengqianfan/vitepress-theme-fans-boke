@@ -86,6 +86,10 @@ const clearNavItemIndex = () => {
 
 <style lang="scss" scoped>
 @use './app.scss';
+@use './dark.scss';
+
+
+
 
 .ph-all {
     display: flex;
