@@ -34,10 +34,10 @@ import PageNotes from '../PageNotes/index.vue'
 import PageLife from '../PageLife/index.vue'
 
 import MainDoc from '../MainDoc/index.vue'
+import { ref } from 'vue'
 
 
 const { page, frontmatter } = useData()
-
 
 
 

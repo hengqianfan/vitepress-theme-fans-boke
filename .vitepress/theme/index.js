@@ -4,7 +4,6 @@ import { onMounted, watch, nextTick } from 'vue'
 
 
 
-
 import Mermaid from './components/Mermaid/index.vue'
 
 

@@ -170,12 +170,11 @@ const changeTheme = (mo) => {
 
         .xNav-siteName {
             margin-left: 15px;
+            min-width: 80px;
             height: 30px;
             line-height: 30px;
-            font-family: 'ZQK英文';
-            font-size: 16px;
-
-
+            font-family: '优设标题黑';
+            font-size: 12px;
         }
 
 

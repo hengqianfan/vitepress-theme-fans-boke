@@ -5,7 +5,7 @@ import mermaidPlugin from './tools/myMermaid'
 import { setAllSidebars } from './tools/setSidebar'
 
 export default defineConfig({
-  title: "ZONOTES",
+  title: xdata.SiteName,
   description: "衡千帆的世界",
   base: xdata.base,
   outDir: './.vitepress/dist',

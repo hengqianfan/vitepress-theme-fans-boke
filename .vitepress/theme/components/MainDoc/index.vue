@@ -3,17 +3,12 @@
     <div class="vp-doc">
 
         <div class="" v-if="boke.isShowDocAfter">
-
             <MainDocAfter />
-
         </div>
 
         <div class="vp-doc-content">
             <Content />
         </div>
-
-
-
 
         <div class="outline" v-if="boke.isShowOutline">
             <MainDocOutline />
@@ -119,12 +114,6 @@ const isInNotesFolder = () => {
     }
 
 }
-
-
-
-
-
-
 
 
 

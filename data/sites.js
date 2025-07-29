@@ -825,11 +825,20 @@ export const sites_data = [
                     },
 
                     {
-                        value: '混元',
+                        value: '腾讯混元',
                         link: 'https://hunyuan.tencent.com/',
                         icon: 'hunyuan',
                         intro: '腾讯旗下，蛮无语的，强迫下APP'
                     },
+                    {
+                        value: '腾讯元宝',
+                        link: 'https://yuanbao.tencent.com/chat',
+                        icon: 'yuanbao',
+                        intro: '腾讯旗下，基于混元的AI大模型'
+                    },
+
+
+
                     {
                         value: 'deepseek',
                         link: 'https://www.deepseek.com/',
@@ -1046,18 +1055,6 @@ export const sites_data = [
                         icon: 'renren',
                         intro: '看外国的电视剧还是挺方便的'
                     },
-                    {
-                        value: '小白网',
-                        link: 'https://m.xb84w.net/',
-                        icon: 'xiaobai',
-                        intro: '视频资源平台'
-                    },
-                    {
-                        value: '可可影视',
-                        link: 'https://www.keke13.com/',
-                        icon: 'keke',
-                        intro: '在线视频资源平台'
-                    },
 
                     {
                         value: '猫狸盘搜',
@@ -1072,6 +1069,33 @@ export const sites_data = [
                         icon: 'video',
                         intro: '中国移动云盘资源'
                     },
+                    {
+                        value: '影视森林',
+                        link: 'https://www.549.tv/',
+                        icon: 'video',
+                        intro: '导航站，收集了影视资源站点'
+                    },
+
+                    {
+                        value: '低端影视',
+                        link: 'https://ddys.pro/',
+                        icon: 'video',
+                        intro: '网友自建的影视站点，资源丰富'
+                    },
+
+                    {
+                        value: '小白网',
+                        link: 'https://m.xb84w.net/',
+                        icon: 'xiaobai',
+                        intro: '已失效'
+                    },
+                    {
+                        value: '可可影视',
+                        link: 'https://www.keke13.com/',
+                        icon: 'keke',
+                        intro: '在线视频资源平台'
+                    }
+
 
 
                 ]
