@@ -729,6 +729,13 @@ export const sites_data = [
                 children: [
 
                     {
+                        value: 'cursor',
+                        link: 'https://cursor.com/cn/home',
+                        icon: 'cursor',
+                        intro: 'AI代码编辑器'
+                    },
+
+                    {
                         value: 'vxe-table',
                         link: 'https://vxetable.cn/',
                         icon: 'vxe',
