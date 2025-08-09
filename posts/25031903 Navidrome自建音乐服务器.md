@@ -219,3 +219,31 @@ http://coverbox.henry-hu.com/
 ## 3. 本地安装
 
 https://www.navidrome.org/docs/installation/windows/#msi-install
+
+进入下载仓库后
+
+选择
+
+`navidrome_0.58.0_windows_amd64_installer.msi`
+
+中间的数字是版本号
+
+安装时填写三个路径：
+
+软件的安装路径
+
+```txt
+D:\Navidrome\main\
+```
+
+软件的数据路径
+
+```txt
+D:\Navidrome\data
+```
+
+音乐的资源路径
+
+```txt
+E:\resource\Music
+```

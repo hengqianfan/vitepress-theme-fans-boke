@@ -1,6 +1,8 @@
 <template>
     <div class="ph-all">
 
+        {{ posts }}
+
         <div class="articlesCards">
 
             <div class="articlesCard" v-for="item in posts.showedPosts">

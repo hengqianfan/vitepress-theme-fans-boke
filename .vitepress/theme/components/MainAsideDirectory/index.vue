@@ -76,6 +76,7 @@ onMounted(() => {
     // 但有时可能不通过 笔记聚合页面跳转 比如 载入后刷新和 从其他页面中的链接跳转时
     // 获取当前文章的路径，然后更新目录
     notes.updateDirectory(page.value.relativePath || "")
+
     // NowDirectory.value = notes.NowDirectory
     // window.location.reload();
 })
