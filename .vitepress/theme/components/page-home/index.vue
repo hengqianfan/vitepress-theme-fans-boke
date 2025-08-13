@@ -1,7 +1,7 @@
 <template>
     <div class="ph-all">
 
-        {{ posts }}
+
 
         <div class="articlesCards">
 
@@ -56,8 +56,11 @@ import { getPostName } from '../../../tools/getPostName'
 import { formatDate } from '../../../tools/formatDate'
 import { useBokeStore } from '../../../../stores/boke'
 import { usePostsStore } from '../../../../stores/posts'
+// import { formatDate, nTest } from 'nvp-basejs'
+
 const posts = usePostsStore()
-const { page } = useData()
+
+
 
 onMounted(() => {
 

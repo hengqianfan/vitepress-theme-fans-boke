@@ -6,7 +6,7 @@
 
         <br>
 
-        <div class="mad-title1" v-for="it in notes.NowDirectory">
+        <div class="mad-title1" v-for="it in showedDirectory">
 
             <div class="" v-if="it.items">
 
@@ -58,17 +58,13 @@ import { useData, withBase } from 'vitepress'
 import { ref, onMounted, onUpdated } from 'vue'
 import { useBokeStore } from '../../../../stores/boke'
 import { useNotesStore } from '../../../../stores/notes'
-
-
 const boke = useBokeStore()
 const notes = useNotesStore()
-
-
 const { page } = useData()
 
+notes.updateDirectory(page.value.relativePath || "")
 
-
-
+const showedDirectory = notes.NowDirectory
 
 onMounted(() => {
     // 修复BUG：在刷新页面时，让目录数据不丢失！
@@ -76,24 +72,14 @@ onMounted(() => {
     // 但有时可能不通过 笔记聚合页面跳转 比如 载入后刷新和 从其他页面中的链接跳转时
     // 获取当前文章的路径，然后更新目录
     notes.updateDirectory(page.value.relativePath || "")
-
+    showedDirectory.value = notes.NowDirectory
     // NowDirectory.value = notes.NowDirectory
     // window.location.reload();
-})
-
-
-onUpdated(() => {
-    // notes.updateDirectory(page.value.relativePath || "")
-
-    // notes.updateDirectory(page.value.relativePath || "")
-    notes.updateDirectory(page.value.relativePath || "")
-
-    // 更新目录树（侧边栏）
-    // updateDirectory()
-    // 如果跳转到 pages 页面 ，关闭目录树，因为只有 笔记 才有目录树
-
 
 })
+
+
+
 
 const toPage = (mo) => {
 

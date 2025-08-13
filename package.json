@@ -13,6 +13,7 @@
     "@giscus/vue": "^3.1.1",
     "medium-zoom": "^1.1.0",
     "mermaid": "^11.6.0",
+    "nvp-basejs": "latest",
     "pinia": "^3.0.2",
     "sass": "^1.86.3",
     "vue": "^3.5.13"

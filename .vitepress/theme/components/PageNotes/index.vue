@@ -23,9 +23,9 @@
 
                     <div class="pn-notes-card-notes-note-title">
                         <!-- 当进入笔记页面后，关闭侧边栏的多余组件 -->
-                        <a :href="withBase(it2.link)" @click="boke.openDirectory(), boke.closePerson()">
-                            {{
-                                it2.name }}</a>
+                        <a :href="withBase(it2.link)" target="_blank">
+                            {{ it2.name }}
+                        </a>
 
                     </div>
                 </div>

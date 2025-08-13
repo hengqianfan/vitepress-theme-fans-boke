@@ -5,7 +5,7 @@ import xMain from './components/Main/index.vue'
 import XBanner from './components/Banner/index.vue'
 import bokeMain from '../../data/main.json'
 
-
+// window.location.reload();
 
 // import NotFound from './NotFound.vue'
 // import Home from './Home.vue'

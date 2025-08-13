@@ -32,6 +32,8 @@ import { onMounted, onUpdated, watch, ref } from 'vue';
 import { useBokeStore } from '../../../../stores/boke';
 import { useNotesStore } from '../../../../stores/notes';
 
+
+
 const notes = useNotesStore()
 
 
@@ -134,47 +136,10 @@ onMounted(() => {
         boke.openOutline
     } else {
         boke.openOutline()
-    }
-
-})
-
-
-onUpdated(() => {
-
-    boke.closeOutline()
-
-    // 主页
-    if (isHome()) {
-
-        boke.closeOutline()
-        boke.openPerson()
-        // 关于
-    } else if (isAbout()) {
-        boke.openPerson()
-        boke.openOutline()
-
-    } else if (isSites()) {
-        boke.closeOutline()
-        boke.openPerson()
-    } else if (isNotes()) {
-        boke.closeOutline()
-        boke.openPerson()
-    } else {
-        boke.openOutline()
-    }
-
-    if (isInNotesFolder()) {
         boke.openDirectory()
-        boke.closePerson()
     }
 
-
-    // if (page.value.headers.length == 0) {
-    //     isShow.value = false
-    // }
-
 })
-
 
 
 
