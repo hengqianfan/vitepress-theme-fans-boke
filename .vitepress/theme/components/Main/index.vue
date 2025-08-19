@@ -52,7 +52,7 @@ const { page, frontmatter } = useData()
     margin: 0px 5%;
 
     width: 90%;
-
+    min-height: 80vh;
     z-index: 20;
     position: -webkit-sticky;
     position: sticky !important;
@@ -62,7 +62,6 @@ const { page, frontmatter } = useData()
 
 
 
-    // background-color: red;
 
 
 

@@ -53,11 +53,8 @@ const boke = useBokeStore()
     min-height: 80vh;
     display: flex;
     flex-direction: column;
-
     position: absolute;
-
-    // background-color: rebeccapurple;
-
+    overflow: scroll;
 
     .ma-container,
     .ma-container div {

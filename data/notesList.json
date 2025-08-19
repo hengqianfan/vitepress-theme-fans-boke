@@ -21,6 +21,13 @@
         "cover": "/cover/jscover.png"
     },
     {
+        "name": "TypeScript",
+        "link": "/notes/typescript/00 简述",
+        "kind": "编程",
+        "icon": "/icon/typescript.png",
+        "cover": "/cover/tscover.png"
+    },
+    {
         "name": "VUE",
         "link": "/notes/vue/00 简述",
         "kind": "编程",

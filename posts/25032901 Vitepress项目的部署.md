@@ -4,7 +4,8 @@ tags: ['web','centos','服务器','vitepress','vue']
 icon: 'vitepress'
 open: false
 id: 25032901
-intro: 
+cover: 'vitepress2'
+
 ---
  
 ######  {{ $frontmatter.id? $frontmatter.id : $frontmatter.zoid }}

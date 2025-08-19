@@ -2,7 +2,8 @@
 aside: left
 tags: ['修改中','vitepress','vue']
 icon: 'vitepress'
-cover: '/cover/vitepresscover.png'
+cover: 'vitepress'
+
 open: false
 id: 24101001
 ---

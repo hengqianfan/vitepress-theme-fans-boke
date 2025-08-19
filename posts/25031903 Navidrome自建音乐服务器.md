@@ -4,7 +4,8 @@ tags: ['修改中','Navidrome','音乐']
 icon: 'navidrome'
 open: false
 id: 25031903
-cover: '/cover/navidrome.png'
+cover: 'navidrome'
+
 
 --- 
  

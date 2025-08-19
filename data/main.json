@@ -1,5 +1,6 @@
 {
     "base": "/vitepress-theme-fans-boke/",
+    "CoverServer": "https://raw.githubusercontent.com/hengqianfan/nCover/refs/heads/main/repo/",
     "SiteName": "牛牛笔记",
     "PersonName": "衡千帆",
     "PersonIntro": "拒绝内耗，先完成，再完美",
@@ -189,7 +190,7 @@
         },
         {
             "name": "网址",
-            "link": "/pages/sites"
+            "link": "https://hengqianfan.github.io/xSites/"
         },
         {
             "name": "笔记",

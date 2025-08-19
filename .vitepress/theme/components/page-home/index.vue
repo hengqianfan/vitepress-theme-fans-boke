@@ -56,6 +56,7 @@ import { getPostName } from '../../../tools/getPostName'
 import { formatDate } from '../../../tools/formatDate'
 import { useBokeStore } from '../../../../stores/boke'
 import { usePostsStore } from '../../../../stores/posts'
+import xdata from '../../../../data/main.json';
 // import { formatDate, nTest } from 'nvp-basejs'
 
 const posts = usePostsStore()
@@ -74,11 +75,11 @@ onMounted(() => {
 const boke = useBokeStore()
 
 const getImgSrc = (mo) => {
-    if (mo) {
-        return `${mo}`
-    }
-    return '/cover/momo.png'
+    // 1. 如果没有封面图片，则返回默认图片
+    // 2. 如果有封面图片，且存在资源地址，则返回对应的图片地址
+    // 3. 如果有封面图片，存储在项目本身的目录下，则返回对应的图片地址
 
+    return `${xdata.CoverServer}${mo}.png`
 }
 
 // 防止从主页进入文章页后，导航栏的主页按钮依旧保持选中的状态

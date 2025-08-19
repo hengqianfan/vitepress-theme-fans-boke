@@ -2,7 +2,7 @@
 tags: ['报错','vitepress','vue']
 icon: 'vitepress'
 aside: left
-cover: '/cover/24082801.png'
+cover: 'vitepress'
 ---
 
 ###### ID: 24082801 

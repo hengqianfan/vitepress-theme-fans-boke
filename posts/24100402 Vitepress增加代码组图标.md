@@ -2,7 +2,8 @@
 aside: left
 tags: ['vitepress','vue']
 icon: 'vitepress'
-cover: '/cover/vitepresscover.png'
+cover: 'vitepress'
+
 
 ---
  

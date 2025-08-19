@@ -2,7 +2,7 @@
 aside: left
 tags: ['vitepress','elementPlus','vue']
 icon: 'vitepress'
-cover: '/cover/vitepresscover.png'
+cover: 'vitepress'
 ---
 
 ###### 24090101

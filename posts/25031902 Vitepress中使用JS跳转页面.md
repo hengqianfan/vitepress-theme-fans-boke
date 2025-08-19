@@ -4,7 +4,8 @@ tags: ['vitepress','vue']
 icon: 'vitepress'
 open: true
 id: 25031902
-cover: '/cover/vitepresscover.png' 
+cover: 'vitepress'
+
 
 ---
  

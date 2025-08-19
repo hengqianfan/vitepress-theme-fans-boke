@@ -3,7 +3,8 @@ aside: left
 tags: ['wordpress','web']
 icon: 'wordpress'
 open: false
-cover: '/cover/wordpress.png'
+cover: 'wordpress'
+
 mothbal: true
 ---
  
