@@ -123,6 +123,10 @@
         [
             "/notes/wordpress",
             1
+        ],
+        [
+            "/notes/nestjs",
+            1
         ]
     ],
     "SearchKeyword": "站外搜索",

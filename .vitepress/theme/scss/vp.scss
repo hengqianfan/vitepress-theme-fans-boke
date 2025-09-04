@@ -1,7 +1,7 @@
 :root {
 
     h1 {
-        margin: 50px;
+        margin: 20px;
         line-height: 28px;
         font-size: 32px;
         font-weight: 400;
@@ -12,11 +12,12 @@
         padding: 10px;
 
 
+
     }
 
     h2 {
         margin: 15px;
-        margin-top: 100px;
+        margin-top: 50px;
         line-height: 28px;
         font-size: 28px;
         font-weight: 400;
@@ -76,6 +77,18 @@
         margin-top: 5px;
         font-weight: 500;
     }
+
+    blockquote {
+        border-left: 5px solid var(--vp-c-brand-1);
+        /* 左侧竖线颜色 */
+        padding: 0.5em 1em;
+        margin: 1em 0;
+        background: rgba(0, 0, 0, 0.03);
+        /* 背景色 */
+        border-radius: 1px;
+        color: #797676;
+
+    }
 }
 
 :root {
@@ -91,6 +104,18 @@
         --vp-custom-block-info-text: var(--vp-c-text-1);
         --vp-custom-block-info-bg: #f1efef;
         --vp-custom-block-info-code-bg: var(--vp-c-default-soft);
+
+        blockquote {
+            border-left: 5px solid #5a5454;
+            /* 左侧竖线颜色 */
+            padding: 0.5em 1em;
+            margin: 1em 0;
+            background: rgba(0, 0, 0, 0.03);
+            /* 背景色 */
+            border-radius: 1px;
+            color: #797676;
+
+        }
     }
 
     & {
@@ -114,6 +139,19 @@
         --vp-custom-block-tip-bg: #d9d1f3;
         color: #191f18;
         --vp-custom-block-tip-code-bg: var(--vp-c-tip-soft);
+
+
+        blockquote {
+            border-left: 5px solid #d476c8;
+            /* 左侧竖线颜色 */
+            padding: 0.5em 1em;
+            margin: 1em 0;
+            background: rgba(203, 173, 221, 0.3);
+            /* 背景色 */
+            border-radius: 1px;
+            color: #bf398e;
+
+        }
     }
 
 
@@ -134,7 +172,17 @@
         // --vp-custom-block-warning-code-bg: var(--vp-c-warning-soft);
         // --vp-custom-block-warning-code-bg: #1e5aa8;
 
+        blockquote {
+            border-left: 5px solid #e07f2a;
+            /* 左侧竖线颜色 */
+            padding: 0.5em 1em;
+            margin: 1em 0;
+            background: rgba(222, 213, 154, 0.3);
+            /* 背景色 */
+            border-radius: 1px;
+            color: #a56627;
 
+        }
     }
 
     // .custom-block.warning a,
@@ -163,6 +211,20 @@
         --vp-custom-block-danger-code-bg: var(--vp-c-danger-soft);
 
         transition: 1s ease;
+
+        blockquote {
+            border-left: 5px solid #b10536;
+            /* 左侧竖线颜色 */
+            padding: 0.5em 1em;
+            margin: 1em 0;
+            background: rgb(243, 203, 211);
+            /* 背景色 */
+            border-radius: 1px;
+            color: rgb(190, 56, 56);
+
+        }
+
+
     }
 
     // .custom-block.danger:hover {

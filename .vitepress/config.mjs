@@ -37,6 +37,15 @@ export default defineConfig({
     },
   },
   vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern', // 或 'modern-compiler':cite[5]:cite[8]
+          // 如果需要临时屏蔽警告，可同时添加下行
+          // silenceDeprecations: ['legacy-js-api'], :cite[10]
+        },
+      },
+    },
     plugins: [
       groupIconVitePlugin()
     ],

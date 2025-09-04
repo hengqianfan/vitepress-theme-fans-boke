@@ -126,6 +126,20 @@
         "cover": "/cover/vscodecover.png"
     },
     {
+        "name": "express",
+        "link": "/notes/express/00 简述",
+        "kind": "编程",
+        "icon": "/icon/express.png",
+        "cover": "/cover/express.png"
+    },
+    {
+        "name": "nestjs",
+        "link": "/notes/nestjs/00 简述",
+        "kind": "编程",
+        "icon": "/icon/nestjs.png",
+        "cover": "/cover/nestjs.png"
+    },
+    {
         "name": "游戏世界",
         "link": "/notes/game/00 简述",
         "kind": "其他",

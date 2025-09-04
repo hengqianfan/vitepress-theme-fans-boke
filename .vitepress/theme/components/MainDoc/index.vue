@@ -2,7 +2,7 @@
 
     <div class="vp-doc">
 
-        <div class="" v-if="boke.isShowDocAfter">
+        <div class="" v-show="boke.isShowDocAfter">
             <MainDocAfter />
         </div>
 
@@ -88,8 +88,10 @@ const isSites = () => {
     } else {
         return false
     }
-
 }
+
+
+
 
 const isNotes = () => {
     let path = page.value.relativePath
@@ -137,6 +139,12 @@ onMounted(() => {
     } else {
         boke.openOutline()
         boke.openDirectory()
+    }
+
+    boke.openDocAfter()
+
+    if (isInNotesFolder()) {
+        boke.closeDocAfter()
     }
 
 })
