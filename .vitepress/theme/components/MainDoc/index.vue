@@ -2,9 +2,9 @@
 
     <div class="vp-doc">
 
-        <div class="" v-show="boke.isShowDocAfter">
+        <!-- <div class="" v-show="boke.isShowDocAfter">
             <MainDocAfter />
-        </div>
+        </div> -->
 
         <div class="vp-doc-content">
             <Content />
@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import MainDocAfter from '../MainDocAfter/index.vue'
+// import MainDocAfter from '../MainDocAfter/index.vue'
 import MainDocOutline from '../MainDocOutline/index.vue'
 import comment from '../comment/index.vue'
 

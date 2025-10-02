@@ -10,4 +10,6 @@ export const getIconUrl = (momo) => {
 
     }
     return `/icon/${momo}.png`
+
+
 }

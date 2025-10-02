@@ -65,8 +65,6 @@ function getToday() {
     border-radius: 10px;
     margin: 10px;
 
-
-    color: rgb(86, 86, 218);
     color: rgb(109, 44, 55);
     font-size: 14px;
     font-family: '优设标题黑';
